@@ -1,0 +1,133 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/skills.png" type="Texture" id=1]
+[ext_resource path="res://assets/equips.png" type="Texture" id=2]
+[ext_resource path="res://assets/black_layout.png" type="Texture" id=3]
+[ext_resource path="res://assets/config.png" type="Texture" id=4]
+[ext_resource path="res://assets/bag.png" type="Texture" id=5]
+[ext_resource path="res://Layout.gd" type="Script" id=6]
+[ext_resource path="res://assets/1577_0.png" type="Texture" id=7]
+[ext_resource path="res://assets/transparentDark07.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[node name="Layout" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="LayoutSkin" type="TextureRect" parent="."]
+margin_right = 1025.0
+margin_bottom = 610.0
+texture = ExtResource( 3 )
+expand = true
+flip_v = true
+
+[node name="gameEventsLayout" type="Panel" parent="."]
+margin_left = 683.0
+margin_top = 350.0
+margin_right = 723.0
+margin_bottom = 390.0
+rect_scale = Vector2( 7.64, 5.16 )
+
+[node name="EventsLog" type="RichTextLabel" parent="gameEventsLayout"]
+margin_left = 0.26178
+margin_top = 0.58139
+margin_right = 300.262
+margin_bottom = 200.581
+rect_scale = Vector2( 0.13, 0.2 )
+
+[node name="ButtonBag" type="Button" parent="."]
+margin_left = 50.0
+margin_top = 562.0
+margin_right = 95.0
+margin_bottom = 604.0
+icon = ExtResource( 5 )
+
+[node name="ButtonSkills" type="Button" parent="."]
+margin_left = 150.0
+margin_top = 562.0
+margin_right = 195.0
+margin_bottom = 604.0
+icon = ExtResource( 1 )
+
+[node name="ButtonEquip" type="Button" parent="."]
+margin_left = 250.0
+margin_top = 562.0
+margin_right = 295.0
+margin_bottom = 604.0
+icon = ExtResource( 2 )
+
+[node name="ButtonConfig" type="Button" parent="."]
+margin_left = 350.0
+margin_top = 562.0
+margin_right = 395.0
+margin_bottom = 604.0
+icon = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 513, 307 )
+current = true
+editor_draw_limits = true
+
+[node name="optionsLayout" type="Panel" parent="."]
+margin_left = 683.0
+margin_top = 40.0
+margin_right = 723.0
+margin_bottom = 95.0
+rect_scale = Vector2( 7.64, 5.16 )
+
+[node name="ButtonExit" type="Button" parent="optionsLayout"]
+visible = false
+margin_left = 9.0314
+margin_top = 42.8295
+margin_right = 81.0314
+margin_bottom = 78.8295
+rect_scale = Vector2( 0.3, 0.3 )
+text = "   EXIT"
+icon = ExtResource( 7 )
+flat = true
+
+[node name="TouchScreenButtonRight" type="TouchScreenButton" parent="."]
+position = Vector2( 192, 464 )
+scale = Vector2( 2.04, 2.88 )
+shape = SubResource( 1 )
+shape_centered = false
+action = "ui_right"
+
+[node name="TouchScreenButtonLeft" type="TouchScreenButton" parent="."]
+position = Vector2( 74, 464 )
+scale = Vector2( 1.84, 2.83978 )
+shape = SubResource( 2 )
+shape_centered = false
+action = "ui_left"
+
+[node name="TouchScreenButtonUp" type="TouchScreenButton" parent="."]
+position = Vector2( 134, 403 )
+scale = Vector2( 2.8, 1.64 )
+shape = SubResource( 3 )
+shape_centered = false
+action = "ui_up"
+
+[node name="TouchScreenButtonDown" type="TouchScreenButton" parent="."]
+position = Vector2( 135, 526 )
+scale = Vector2( 2.88, -1.62234 )
+shape = SubResource( 4 )
+shape_centered = false
+action = "ui_down"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 54.0
+margin_top = 384.0
+margin_right = 214.0
+margin_bottom = 544.0
+texture = ExtResource( 9 )
+
+[connection signal="pressed" from="ButtonConfig" to="." method="_on_ButtonConfig_pressed"]
+[connection signal="pressed" from="optionsLayout/ButtonExit" to="." method="_on_ButtonExit_pressed"]
