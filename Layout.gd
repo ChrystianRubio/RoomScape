@@ -5,22 +5,22 @@ extends Control
 # var a = 2
 # var b = "text"
 
-var pontuacao = 0
+#var pontuacao = 0
 
-var sairTexto = {
-	"text":"quer sair mesmo ramelao??",
-	"pontuacao": "0",
-}
+#var sairTexto = {
+#	"text":"quer sair mesmo ramelao??",
+#	"pontuacao": "0",
+#}
 
-var path = "user://textJsonTeste3.save"
+#var path = "user://textJsonTeste3.save"
 
+#obtendo um objeto do tipo savegame para acessar o banco de dados
+var manipulation_acess_dd = SaveGame.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#set_json()
-	#get_user_current()
-	#set_save()
-	acess_save()
+
+#	acess_save()
 	
 	pass # Replace with function body.
 
@@ -32,20 +32,16 @@ func _process(delta):
 
 
 func _on_ButtonConfig_pressed():
-	pontuacao += 1
-	sairTexto[pontuacao] = str(pontuacao)
-	#sairTexto["pontuacao"] = str(pontuacao)
-	#acess_save()
-	set_save()
-	print(pontuacao)
+
 	if $optionsLayout/ButtonExit.visible:
 		$optionsLayout/ButtonExit.visible = false
 
 	else:
 		$optionsLayout/ButtonExit.visible = true
+		$gameEventsLayout/EventsLog.text = str(manipulation_acess_dd.getValue_game_events_manipulation()['text_exit'])
 		#$gameEventsLayout/EventsLog.text = str('Are you sure you want to exit?')
 		#$gameEventsLayout/EventsLog.text = str(userCurrent["text"])
-	$gameEventsLayout/EventsLog.text = str(sairTexto)
+		#$gameEventsLayout/EventsLog.text = str(sairTexto)
 
 func _on_ButtonExit_pressed():
 	$".".get_tree().quit()
@@ -53,34 +49,13 @@ func _on_ButtonExit_pressed():
 
 
 
-#fazendo uma funcao para o proprio godot criar o save
-func set_save():
-	var file = File.new()
-	# abrindo o arquivo em forma de leitura para salvar dados
-	file.open(path, file.WRITE)
-	file.store_var(sairTexto)
-	file.close()
+func _on_ButtonSkills_pressed():
+	#colocando o texto nos itens
 
-
-
-# fazendo uma função para acessar o save
-func acess_save():
-	var file = File.new()
-	#verificando se o arquivo existe ou nao
-	if not file.file_exists(path):
-		sairTexto = {
-			"text":"deseja sair mesmo ?",
-			"pontuacao": "0",
-		}
-		set_save() # se nao existir o resultado do dict acima é o valor default
-
-	#estamos lendo o arquivo
-	file.open(path, file.READ)
-	sairTexto = file.get_var()
-	file.close()
-
-
-
-
-
-
+	$optionsLayout/ItemList.set_item_text(0, "Attack: " + str(manipulation_acess_dd.value_skills_manipulation['attack']))
+	$optionsLayout/ItemList.set_item_text(1, "Defense: " + str(manipulation_acess_dd.value_skills_manipulation['defense']))
+	if $optionsLayout/ItemList.visible:
+		$optionsLayout/ItemList.visible = false
+	else:
+		$optionsLayout/ItemList.visible = true
+	pass # Replace with function body.

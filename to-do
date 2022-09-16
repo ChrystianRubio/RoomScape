@@ -1,9 +1,9 @@
 
-fazer um teste com o json para ver como o celular se comporta
+
 
 botao de sair esta bem feio arrumar..
 
-banco de dados json(simples e nao estamos nos importando com segurança no momento)
+banco de dados save_native_godot(simples e nao estamos nos importando com segurança no momento)
 
 
 colocar as skills(programacao):
@@ -14,6 +14,19 @@ colocar as skills(programacao):
 colocar a bag(programaçao):
 	
 
+colocar as skills
 colocar os equipamentos que o personagem esta usando
 
+estou pensando em ter apenas duas funces que irao mexer com o  banco de dados
+passando o path e valores default e tambem valor de manipulação como paramentros pra elas
+sendo assim temos que ter as vaiaveis com o path de cada
+e temos quer ter as variaveis com o valores default tambem de cada 
+e temos que ter as variaveis com os valores para manipulação de cada
+
+
+
+ver o botao(funcao de aparecer as msg log de sair) e como sera feito  | RESOLVIDO
+resolvemos da seguinte forma
+fizemos uma classe e vamos trabalhar igualmente como o java(getter e setters, funcao static or not)
+assim todo o projeto tem acesso as coisas,basta instaciar um objeto 
 

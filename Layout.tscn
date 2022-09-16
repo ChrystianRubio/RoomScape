@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/skills.png" type="Texture" id=1]
 [ext_resource path="res://assets/equips.png" type="Texture" id=2]
@@ -7,7 +7,9 @@
 [ext_resource path="res://assets/bag.png" type="Texture" id=5]
 [ext_resource path="res://Layout.gd" type="Script" id=6]
 [ext_resource path="res://assets/1577_0.png" type="Texture" id=7]
+[ext_resource path="res://assets/774_0.png" type="Texture" id=8]
 [ext_resource path="res://assets/transparentDark07.png" type="Texture" id=9]
+[ext_resource path="res://assets/defense.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -23,6 +25,7 @@ anchor_bottom = 1.0
 script = ExtResource( 6 )
 
 [node name="LayoutSkin" type="TextureRect" parent="."]
+modulate = Color( 0.996078, 0.996078, 0.996078, 1 )
 margin_right = 1025.0
 margin_bottom = 610.0
 texture = ExtResource( 3 )
@@ -90,9 +93,24 @@ margin_top = 42.8295
 margin_right = 81.0314
 margin_bottom = 78.8295
 rect_scale = Vector2( 0.3, 0.3 )
+focus_mode = 1
 text = "   EXIT"
 icon = ExtResource( 7 )
 flat = true
+
+[node name="ItemList" type="ItemList" parent="optionsLayout"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -19.0
+margin_top = -27.0
+margin_right = 108.0
+margin_bottom = 151.0
+rect_scale = Vector2( 0.3, 0.3 )
+focus_mode = 0
+items = [ "Attack", ExtResource( 8 ), false, "Defense", ExtResource( 10 ), false ]
 
 [node name="TouchScreenButtonRight" type="TouchScreenButton" parent="."]
 position = Vector2( 192, 464 )
@@ -129,5 +147,6 @@ margin_right = 214.0
 margin_bottom = 544.0
 texture = ExtResource( 9 )
 
+[connection signal="pressed" from="ButtonSkills" to="." method="_on_ButtonSkills_pressed"]
 [connection signal="pressed" from="ButtonConfig" to="." method="_on_ButtonConfig_pressed"]
 [connection signal="pressed" from="optionsLayout/ButtonExit" to="." method="_on_ButtonExit_pressed"]
