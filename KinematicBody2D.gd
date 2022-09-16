@@ -2,8 +2,6 @@ extends KinematicBody2D
 
 
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -14,6 +12,7 @@ export (int) var speed = 200
 
 var velocity = Vector2()
 
+#movimentacao persoangem
 func get_input():
 	velocity = Vector2()
 
@@ -52,6 +51,8 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

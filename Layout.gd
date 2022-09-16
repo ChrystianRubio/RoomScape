@@ -2,20 +2,13 @@ extends Control
 
 
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
-#var pontuacao = 0
 
-#var sairTexto = {
-#	"text":"quer sair mesmo ramelao??",
-#	"pontuacao": "0",
-#}
-
-#var path = "user://textJsonTeste3.save"
 
 #obtendo um objeto do tipo savegame para acessar o banco de dados
 var manipulation_acess_dd = SaveGame.new()
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,6 +24,7 @@ func _process(delta):
 	pass
 
 
+# botao config presionado
 func _on_ButtonConfig_pressed():
 
 	if $optionsLayout/ButtonExit.visible:
@@ -38,24 +32,35 @@ func _on_ButtonConfig_pressed():
 
 	else:
 		$optionsLayout/ButtonExit.visible = true
-		$gameEventsLayout/EventsLog.text = str(manipulation_acess_dd.getValue_game_events_manipulation()['text_exit'])
-		#$gameEventsLayout/EventsLog.text = str('Are you sure you want to exit?')
-		#$gameEventsLayout/EventsLog.text = str(userCurrent["text"])
-		#$gameEventsLayout/EventsLog.text = str(sairTexto)
+		$gameEventsLayout/EventsLog.text += str(manipulation_acess_dd.getValue_game_events_manipulation()['text_exit'] + "\n")
 
+
+#botao sair presionado
 func _on_ButtonExit_pressed():
 	$".".get_tree().quit()
 
 
 
-
+#botao skills presionado
 func _on_ButtonSkills_pressed():
-	#colocando o texto nos itens
+	#colocando o level das skills ao lado do icon
 
-	$optionsLayout/ItemList.set_item_text(0, "Attack: " + str(manipulation_acess_dd.value_skills_manipulation['attack']))
-	$optionsLayout/ItemList.set_item_text(1, "Defense: " + str(manipulation_acess_dd.value_skills_manipulation['defense']))
-	if $optionsLayout/ItemList.visible:
-		$optionsLayout/ItemList.visible = false
+	$optionsLayout/ItemListSkills.set_item_text(0, "Attack: " + str(manipulation_acess_dd.value_skills_manipulation['attack']))
+	$optionsLayout/ItemListSkills.set_item_text(1, "Defense: " + str(manipulation_acess_dd.value_skills_manipulation['defense']))
+	if $optionsLayout/ItemListSkills.visible:
+		$optionsLayout/ItemListSkills.visible = false
 	else:
-		$optionsLayout/ItemList.visible = true
+		$optionsLayout/ItemListSkills.visible = true
+	pass # Replace with function body.
+
+
+#botao bag presionado
+func _on_ButtonBag_pressed():
+	$optionsLayout/ItemListBag.set_item_icon(0, $Sword1.texture ) 
+	#$optionsLayout/ItemListBag.set_item
+
+	if $optionsLayout/ItemListBag.visible:
+		$optionsLayout/ItemListBag.visible = false
+	else:
+		$optionsLayout/ItemListBag.visible = true
 	pass # Replace with function body.

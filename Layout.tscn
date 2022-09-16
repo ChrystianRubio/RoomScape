@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/skills.png" type="Texture" id=1]
 [ext_resource path="res://assets/equips.png" type="Texture" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://assets/774_0.png" type="Texture" id=8]
 [ext_resource path="res://assets/transparentDark07.png" type="Texture" id=9]
 [ext_resource path="res://assets/defense.png" type="Texture" id=10]
+[ext_resource path="res://sword1Texture.tscn" type="PackedScene" id=11]
+[ext_resource path="res://icon.png" type="Texture" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -42,8 +44,8 @@ rect_scale = Vector2( 7.64, 5.16 )
 [node name="EventsLog" type="RichTextLabel" parent="gameEventsLayout"]
 margin_left = 0.26178
 margin_top = 0.58139
-margin_right = 300.262
-margin_bottom = 200.581
+margin_right = 304.262
+margin_bottom = 195.581
 rect_scale = Vector2( 0.13, 0.2 )
 
 [node name="ButtonBag" type="Button" parent="."]
@@ -98,7 +100,7 @@ text = "   EXIT"
 icon = ExtResource( 7 )
 flat = true
 
-[node name="ItemList" type="ItemList" parent="optionsLayout"]
+[node name="ItemListSkills" type="ItemList" parent="optionsLayout"]
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
@@ -111,6 +113,23 @@ margin_bottom = 151.0
 rect_scale = Vector2( 0.3, 0.3 )
 focus_mode = 0
 items = [ "Attack", ExtResource( 8 ), false, "Defense", ExtResource( 10 ), false ]
+allow_reselect = true
+
+[node name="ItemListBag" type="ItemList" parent="optionsLayout"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -19.0
+margin_top = -27.0
+margin_right = 101.0
+margin_bottom = 133.0
+rect_scale = Vector2( 0.3, 0.315504 )
+focus_mode = 0
+items = [ "", null, false, "", ExtResource( 12 ), false, "", ExtResource( 5 ), false ]
+max_columns = 3
+icon_mode = 0
+fixed_icon_size = Vector2( 26, 30 )
 
 [node name="TouchScreenButtonRight" type="TouchScreenButton" parent="."]
 position = Vector2( 192, 464 )
@@ -147,6 +166,10 @@ margin_right = 214.0
 margin_bottom = 544.0
 texture = ExtResource( 9 )
 
+[node name="Sword1" parent="." instance=ExtResource( 11 )]
+visible = false
+
+[connection signal="pressed" from="ButtonBag" to="." method="_on_ButtonBag_pressed"]
 [connection signal="pressed" from="ButtonSkills" to="." method="_on_ButtonSkills_pressed"]
 [connection signal="pressed" from="ButtonConfig" to="." method="_on_ButtonConfig_pressed"]
 [connection signal="pressed" from="optionsLayout/ButtonExit" to="." method="_on_ButtonExit_pressed"]
