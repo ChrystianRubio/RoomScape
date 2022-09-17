@@ -4,7 +4,7 @@ class_name SaveGame
 
 # O caminho dos saves 
 var path_game_events = "user://game_events.save"
-var path_bag = "user://character_bag.save"
+var path_bag = "user://character_bag20.save"
 var path_skills = "user://character_skills.save"
 var path_equip = "user://character_equip.save"
 
@@ -54,6 +54,13 @@ func setValue_skills_manipulation(var value_skills_manipulation):
 # bag
 
 var default_value_bag = {
+	0: {"name": null},
+	1: {"name": null},
+	2: {"name": null},
+	3: {"name": null},
+	4: {"name": null},
+	5: {"name": null},
+	6: {"name": null},
 
 }
 
@@ -67,6 +74,49 @@ func setBag_manipulation(var bag_manipulation):
 	self.bag_manipulation = bag_manipulation
 
 
+####################################################################################################
+
+# equip
+
+var default_value_equip = {
+	0: {"head": null},
+	1: {"armor": null},
+	2: {"weapon": null},
+	3: {"shield": null},
+	4: {"feet": null},
+}
+
+var equip_manipulation = acess_save(path_equip, default_value_equip)
+
+#methods getters and setters do equip
+func getEquip_manipulation():
+	return equip_manipulation
+
+func setEquip_manipulation(var equip_manipulation):
+	self.equip_manipulation = equip_manipulation
+
+
+####################################################################################################
+
+# equip
+""""
+var default_value_status = {
+	0: {"attack": null},
+	1: {"defense": null},
+	2: {"speed": null},
+	3: {"total_level": null},
+}
+
+var equip_manipulation = acess_save(path_equip, default_value_equip)
+
+#methods getters and setters do equip
+func getEquip_manipulation():
+	return equip_manipulation
+
+func setEquip_manipulation(var equip_manipulation):
+	self.equip_manipulation = equip_manipulation
+
+"""
 ####################################################################################################
 
 

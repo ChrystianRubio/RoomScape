@@ -7,11 +7,12 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#var x = SaveGame.new()
-	#var modificando = x.getValue_game_events_manipulation()
-	#modificando["lauis"] = "tatat"
-	#x.setValue_game_events_manipulation(modificando)
-	#$KinematicBody2D/Layout/gameEventsLayout/EventsLog.text += str(x.getValue_game_events_manipulation())
+	$itemsButtonScreen/Sword.position.x = 0
+	$itemsButtonScreen/Sword.position.y = 0
+	$itemsButtonScreen/Sword.visible = true
+	$itemsButtonScreen/WoodShield.position.x = 50
+	$itemsButtonScreen/WoodShield.position.y = -50
+	$itemsButtonScreen/WoodShield.visible = true
 	pass # Replace with function body.
 
 

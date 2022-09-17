@@ -12,15 +12,20 @@ var manipulation_acess_dd = SaveGame.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
-#	acess_save()
-	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#acess_save()
+	
+	for slot_bag in range(0, 7):
+		#condicao para aparecer na layout da bag, se caso existir na bag bd
+		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "Sword5":
+			$optionsLayout/ItemListBag.set_item_icon(slot_bag, $ItemsTexture/sword1.texture ) 
+
+		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "WoodShield":
+			$optionsLayout/ItemListBag.set_item_icon(slot_bag, $ItemsTexture/wood_shield.texture ) 
+
 	pass
 
 
@@ -56,11 +61,29 @@ func _on_ButtonSkills_pressed():
 
 #botao bag presionado
 func _on_ButtonBag_pressed():
-	$optionsLayout/ItemListBag.set_item_icon(0, $Sword1.texture ) 
-	#$optionsLayout/ItemListBag.set_item
+	manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
+
+	print(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, ""))
+
 
 	if $optionsLayout/ItemListBag.visible:
 		$optionsLayout/ItemListBag.visible = false
 	else:
 		$optionsLayout/ItemListBag.visible = true
+	pass # Replace with function body.
+
+
+#botao equip pressionado
+func _on_ButtonEquip_pressed():
+	
+	if $optionsLayout/ItemListEquip.is_selected(0):
+		print($optionsLayout/ItemListEquip.get_item_text(0))
+	#print($optionsLayout/ItemListEquip.is_selected(0))
+	#print($optionsLayout/ItemListEquip.get_selected_items())
+	#print($optionsLayout/ItemListEquip.get_item_text())
+	
+	if $optionsLayout/ItemListEquip.visible:
+		$optionsLayout/ItemListEquip.visible = false
+	else:
+		$optionsLayout/ItemListEquip.visible = true
 	pass # Replace with function body.

@@ -1,11 +1,9 @@
 extends TouchScreenButton
 
 
-# Declare member variables here. Examples:
 
 #obtendo um objto para manipulacao 
 var manipulation_save = SaveGame.new()
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,7 +15,7 @@ func _ready():
 #	pass
 
 
-func _on_Sword_pressed():
+func _on_WoodShield_pressed():
 
 	var mani = manipulation_save.acess_save(manipulation_save.path_bag, "") #mani é o intermediador da manipulacao neste file
 	
@@ -25,7 +23,7 @@ func _on_Sword_pressed():
 	for slot_bag in range(0,7):
 		#se for nulo podera armazenar o objeto
 		if str(manipulation_save.acess_save(manipulation_save.path_bag, "")[slot_bag]["name"]) == "Null":
-			mani[slot_bag] = {"name" : "Sword5", "damage": 1}
+			mani[slot_bag] = {"name" : "WoodShield", "damage": 0, "defense": 1}
 			manipulation_save.set_save(manipulation_save.path_bag,mani)
 			break
 	

@@ -11,20 +11,40 @@ colocar as skills(programacao):
 	defense
 
 
-colocar a bag(programaçao):
+colocar a bag(programaçao): 
+	OK
 	
 
 Passo a passo:
 	colocar as skills | OK
-	colocar a bag:
+	colocar a bag: OK
 		colocar pelo menos um item para gente ver a bag funcionando e posteriormente equip
-	colocar os equipamentos que o personagem esta usando
-		botao de abri bag agora ja pode funcionar
-		total de slots da bag: 6
+
+		botao de abrir a bag agora ja pode funcionar 
+		total de slots da bag: 7
 		o icon  na bag tem que ser automatico
-		o save da bag sera um vetor podendo conter dicionario dentro dele
-		para colocar na bag do menu automaticamente é só fazer um laco correndo pelos
-		vetores e acessando o nome(que sera o mesmo nome da texture)
+		o save da bag sera um dict com key 0 1 2 3 .. 6 
+		para colocar na bag do menu automaticamente é só fazer um laco correndo pelas
+		keys e acessando o nome
+		arrumar aonde o objeto vai aparecer na bag(0,1,2,3,4 ... 7)
+		tem que aparecer aonde estiver vazio
+		no caso da sword1 ela sempre esta aparecendo no slot0
+		a ideia é fazer uma verificaçaõ se existe algo ou nao
+		se nao existir é colocado lá
+
+	os screenbutoon botom das coisas nao vao ficar separados pq senao vai ficar muito baguncado
+		vou fazer uma unificacao das screebnutton que sejam itens
+		como fiz com a itemsTexture
+
+	colocar os equipamentos que o personagem esta usando:
+		precisamos fazer um banco de dados para ele
+	
+	fazer um for para acessar nossa bag para sabermos o que é tal coisa quando clicarmos pelo item list
+	dessa forma conseguimos pegar(pq os itens da bag so tem icon e mais nada, porem o banco de dados da
+	bag tem as coisas verdadeiras)
+	quando clicar e escolher na bag layout , vai fazer uma procura no banco de dados da bag
+	e achar seu correspondente, assim equipando ou posteriormente jogando fora/usando 
+
 
 Arrumar:
 	os botoes tem que estar em conformes

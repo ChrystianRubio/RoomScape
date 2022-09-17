@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://WoodShield.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sword.tscn" type="PackedScene" id=2]
+
+[node name="itemsButtonScreen" type="Node2D"]
+
+[node name="Sword" parent="." instance=ExtResource( 2 )]
+visible = false
+scale = Vector2( 0.3, 0.3 )
+z_index = -2
+
+[node name="WoodShield" parent="." instance=ExtResource( 1 )]
+visible = false
+z_index = -2
