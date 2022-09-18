@@ -20,3 +20,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
+
+
+const spaw_spider = preload("res://Scorpion.tscn")
+func _on_TimerScorpion_timeout():
+	add_child(spaw_spider.instance())
+	pass # Replace with function body.

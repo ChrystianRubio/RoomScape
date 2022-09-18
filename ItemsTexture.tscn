@@ -1,11 +1,19 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/435_0.png" type="Texture" id=1]
 [ext_resource path="res://assets/woodShield.png" type="Texture" id=2]
+[ext_resource path="res://assets/shield_02d.png" type="Texture" id=3]
+[ext_resource path="res://assets/sword_02b.png" type="Texture" id=4]
+[ext_resource path="res://assets/helmet_01a.png" type="Texture" id=5]
+[ext_resource path="res://assets/boots_01a.png" type="Texture" id=6]
+[ext_resource path="res://assets/armor_01a.png" type="Texture" id=7]
 
 [node name="ItemsTexture" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_horizontal_guides_": [ 2.0 ]
+}
 
 [node name="sword1" type="TextureRect" parent="."]
 visible = false
@@ -18,3 +26,33 @@ visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 2 )
+
+[node name="shieldEquip" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="headEquip" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+
+[node name="armorEquip" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 7 )
+
+[node name="feetEquip" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 6 )
+
+[node name="weaponEquip" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )

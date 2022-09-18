@@ -25,14 +25,12 @@ func _on_Sword_pressed():
 	for slot_bag in range(0,7):
 		#se for nulo podera armazenar o objeto
 		if str(manipulation_save.acess_save(manipulation_save.path_bag, "")[slot_bag]["name"]) == "Null":
-			mani[slot_bag] = {"name" : "Sword5", "damage": 1}
+			mani[slot_bag] = {"name" : "Sword5", "damage": 1, "defense": 0, "weapon": true, "shield": false}
 			manipulation_save.set_save(manipulation_save.path_bag,mani)
 			break
 	
 	
-	
-	#print(mani)
-			#manipulation_save.set_save(manipulation_save.path_bag,mani)
+
 	
 	$".".queue_free()  #destroindo o nó após presionar na sword
 	pass # Replace with function body.

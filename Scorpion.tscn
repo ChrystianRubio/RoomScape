@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/Characters/LethalScorpionIdleSide.png" type="Texture" id=1]
+[ext_resource path="res://Scorpion.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 9.0
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=6]
+
+[node name="Scorpion" type="Node2D"]
+position = Vector2( 0, -1 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 0, 1 )
+shape = SubResource( 7 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+frames = SubResource( 5 )
+animation = "idle"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="KinematicBody2D/AnimatedSprite"]
+position = Vector2( -9, -8 )
+scale = Vector2( 0.892362, 0.88 )
+shape = SubResource( 6 )
+action = "ui_space"
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="KinematicBody2D/AnimatedSprite/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]

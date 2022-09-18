@@ -45,9 +45,16 @@ Passo a passo:
 	quando clicar e escolher na bag layout , vai fazer uma procura no banco de dados da bag
 	e achar seu correspondente, assim equipando ou posteriormente jogando fora/usando 
 
+	colocar log de pegou item
+	colocar log de tomou dano
+	colocar log de atacou
+	
+	colocar o shield pra funcionar em relacao ao ataque dos monstros
+	por default ele fica null gerando assim um problema quando nao temos nada
+	mas nao podemos simplesmente mudar pq null é verificação para muitas coisas
 
 Arrumar:
-	os botoes tem que estar em conformes
+	
 
 estou pensando em ter apenas duas funcoes que irao mexer com o banco de dados
 passando o path e valores default e tambem valor de manipulação como paramentros pra elas

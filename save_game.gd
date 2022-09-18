@@ -4,10 +4,10 @@ class_name SaveGame
 
 # O caminho dos saves 
 var path_game_events = "user://game_events.save"
-var path_bag = "user://character_bag20.save"
-var path_skills = "user://character_skills.save"
-var path_equip = "user://character_equip.save"
-
+var path_bag = "user://character_bag47.save"
+var path_skills = "user://character_skills5.save"
+var path_equip = "user://character_equip27.save"
+var path_status_character = "user://character_status.save"
 
 
 
@@ -17,6 +17,9 @@ var path_equip = "user://character_equip.save"
 
 var default_value_game_events = {
 	"text_exit": "Are you sure you want to exit?",
+	"get_item": "you took an item",
+	"damage": "you are taking damage",
+	"hit": "you are hitting",
 
 }
 
@@ -35,8 +38,8 @@ func setValue_game_events_manipulation(var value_game_events_manipulation):
 # skills
 
 var default_value_skills = {
-	"attack": 0,
-	"defense": 0,
+	0: {"attack": 0},
+	1: {"defense": 0},
 }
 
 var value_skills_manipulation = acess_save(path_skills, default_value_skills)
@@ -98,25 +101,22 @@ func setEquip_manipulation(var equip_manipulation):
 
 ####################################################################################################
 
-# equip
-""""
+# status character
+
 var default_value_status = {
-	0: {"attack": null},
-	1: {"defense": null},
-	2: {"speed": null},
-	3: {"total_level": null},
+	0: {"life": 10},
 }
 
-var equip_manipulation = acess_save(path_equip, default_value_equip)
+var status_manipulation = acess_save(path_status_character, default_value_status)
 
 #methods getters and setters do equip
-func getEquip_manipulation():
+func getStatus_manipulation():
 	return equip_manipulation
 
-func setEquip_manipulation(var equip_manipulation):
-	self.equip_manipulation = equip_manipulation
+func setStatus_manipulation(var status_manipulation):
+	self.status_manipulation = status_manipulation
 
-"""
+
 ####################################################################################################
 
 

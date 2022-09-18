@@ -28,6 +28,7 @@ func get_input():
 		velocity.x -= 1
 		$AnimatedSprite.flip_h = false
 		$AnimatedSprite.play("side_walk")
+
 	elif Input.is_action_just_released("ui_left"):
 		$AnimatedSprite.play("side_idle")
 
@@ -44,6 +45,15 @@ func get_input():
 		$AnimatedSprite.play("up_walk")
 	elif Input.is_action_just_released("ui_up"):
 		$AnimatedSprite.play("up_idle")
+
+
+	if Input.is_action_just_pressed('ui_space'):
+		if $AnimatedSprite.animation == "up_idle":
+			$AnimatedSprite.play("up_attack")
+		elif $AnimatedSprite.animation == "down_idle":
+			$AnimatedSprite.play("down_attack")
+		elif $AnimatedSprite.animation == "side_idle":
+			$AnimatedSprite.play("side_attack")
 
 
 	velocity = velocity.normalized() * speed
