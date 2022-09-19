@@ -17,13 +17,13 @@
 [ext_resource path="res://assets/boots_01a.png" type="Texture" id=15]
 [ext_resource path="res://assets/armor_01a.png" type="Texture" id=16]
 
-[sub_resource type="RectangleShape2D" id=1]
-
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 
 [sub_resource type="RectangleShape2D" id=3]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="Layout" type="Control"]
 anchor_right = 1.0
@@ -110,11 +110,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -19.0
-margin_top = -27.0
-margin_right = 108.0
-margin_bottom = 151.0
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = -20.0
+margin_top = -27.5
+margin_right = 114.0
+margin_bottom = 147.5
+rect_scale = Vector2( 0.3, 0.316 )
 focus_mode = 0
 items = [ "Attack", ExtResource( 8 ), false, "Defense", ExtResource( 10 ), false ]
 allow_reselect = true
@@ -125,10 +125,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -19.0
-margin_top = -27.0
-margin_right = 101.0
-margin_bottom = 133.0
+margin_left = -20.0
+margin_top = -27.5
+margin_right = 114.0
+margin_bottom = 147.5
 rect_scale = Vector2( 0.3, 0.315504 )
 focus_mode = 0
 items = [ "", null, false, "", null, false, "", null, false, "", null, false, "", null, false, "", null, false, "", null, false ]
@@ -138,50 +138,54 @@ fixed_icon_size = Vector2( 26, 30 )
 
 [node name="ItemListEquip" type="ItemList" parent="optionsLayout"]
 visible = false
-margin_right = 132.0
-margin_bottom = 172.0
+margin_right = 134.0
+margin_bottom = 175.0
 rect_scale = Vector2( 0.3, 0.316 )
 focus_mode = 0
 items = [ "head", ExtResource( 14 ), false, "armor", ExtResource( 16 ), false, "weapon", ExtResource( 11 ), false, "shield", ExtResource( 12 ), false, "feet", ExtResource( 15 ), false ]
 icon_scale = 0.9
 fixed_icon_size = Vector2( 26, 32 )
 
-[node name="TouchScreenButtonRight" type="TouchScreenButton" parent="."]
-position = Vector2( 192, 464 )
-scale = Vector2( 2.04, 2.88 )
-shape = SubResource( 1 )
-shape_centered = false
-action = "ui_right"
-
-[node name="TouchScreenButtonLeft" type="TouchScreenButton" parent="."]
-position = Vector2( 74, 464 )
-scale = Vector2( 1.84, 2.83978 )
-shape = SubResource( 2 )
-shape_centered = false
-action = "ui_left"
-
-[node name="TouchScreenButtonUp" type="TouchScreenButton" parent="."]
-position = Vector2( 134, 403 )
-scale = Vector2( 2.8, 1.64 )
-shape = SubResource( 3 )
-shape_centered = false
-action = "ui_up"
-
-[node name="TouchScreenButtonDown" type="TouchScreenButton" parent="."]
-position = Vector2( 135, 526 )
-scale = Vector2( 2.88, -1.62234 )
-shape = SubResource( 4 )
-shape_centered = false
-action = "ui_down"
+[node name="ItemsTexture" parent="." instance=ExtResource( 13 )]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 54.0
-margin_top = 384.0
+margin_top = 392.0
 margin_right = 214.0
-margin_bottom = 544.0
+margin_bottom = 552.0
 texture = ExtResource( 9 )
 
-[node name="ItemsTexture" parent="." instance=ExtResource( 13 )]
+[node name="TouchScreenButtonDown" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2( 81, 142 )
+scale = Vector2( 2.88, -1.62234 )
+shape = SubResource( 4 )
+shape_centered = false
+passby_press = true
+action = "ui_down"
+
+[node name="TouchScreenButtonUp" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2( 80, 19 )
+scale = Vector2( 2.8, 1.64 )
+shape = SubResource( 3 )
+shape_centered = false
+passby_press = true
+action = "ui_up"
+
+[node name="TouchScreenButtonLeft" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2( 20, 80 )
+scale = Vector2( 1.84, 2.83978 )
+shape = SubResource( 2 )
+shape_centered = false
+passby_press = true
+action = "ui_left"
+
+[node name="TouchScreenButtonRight" type="TouchScreenButton" parent="TextureRect"]
+position = Vector2( 138, 80 )
+scale = Vector2( 2.04, 2.88 )
+shape = SubResource( 1 )
+shape_centered = false
+passby_press = true
+action = "ui_right"
 
 [connection signal="pressed" from="ButtonBag" to="." method="_on_ButtonBag_pressed"]
 [connection signal="pressed" from="ButtonSkills" to="." method="_on_ButtonSkills_pressed"]

@@ -4,9 +4,12 @@ extends KinematicBody2D
 # Declare member variables here. Examples:
 
 
+#obtendo um objeto do tipo savegame para acessar o banco de dados
+var manipulation_acess_dd = SaveGame.new()
+
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+#func _ready():
+#	pass # Replace with function body.
 
 export (int) var speed = 200
 
@@ -47,13 +50,15 @@ func get_input():
 		$AnimatedSprite.play("up_idle")
 
 
-	if Input.is_action_just_pressed('ui_space'):
+	if Input.is_action_pressed('ui_space'):
 		if $AnimatedSprite.animation == "up_idle":
 			$AnimatedSprite.play("up_attack")
 		elif $AnimatedSprite.animation == "down_idle":
 			$AnimatedSprite.play("down_attack")
 		elif $AnimatedSprite.animation == "side_idle":
 			$AnimatedSprite.play("side_attack")
+
+
 
 
 	velocity = velocity.normalized() * speed
@@ -64,5 +69,22 @@ func _physics_process(delta):
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
+func _process(delta):
+	
+	#mostrando um  progress bar com a vida do personagem
+	$TextureProgress.min_value = 0
+	$TextureProgress.value = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"]
+	$TextureProgress.max_value = 10
 #	pass
+
+
+# a cada x tempo o personagem ganha x vida e mostra no log
+func _on_HealthLife_timeout():
+	var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
+	if mani[0]["life"] < 10:
+		mani[0]["life"] += 1
+		$Layout/gameEventsLayout/EventsLog.text += manipulation_acess_dd.value_game_events_manipulation["healthLife"] + \
+		" => " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"]) + "\n"
+
+	manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
+	pass # Replace with function body.

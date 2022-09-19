@@ -8,26 +8,51 @@ var manipulation_acess_dd = SaveGame.new()
 
 var attack = 1
 var life = 3
-
+var flagNear = false #uma flag para conseguir somente atacar quando estiver perto
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#$AnimatedSprite.play("idle")
-	$KinematicBody2D/AnimatedSprite.play("idle")
+
+	$KinematicBody22D/AnimatedSprite.play("idle")
+	
+	#inicializando o valor max da vida 
+	$TextureProgress.max_value = life
+	
+	#posicao x e y aleatoria
 	position.x = rand_range(-2404, -2748)
 	position.y = rand_range(6, 227)
+
 	pass # Replace with function body.
 
+var velocity = Vector2()
+func _physics_process(delta):
+	velocity = Vector2()
+	velocity = velocity.normalized() * 100
+	#velocity = move_and_slide(velocity)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
+func _process(delta):
+	
+	#mostrando progress bar com a vida 
+	$TextureProgress.value = life
+
+	
+	
+	#verificando se tiver arma equipada o screenAction recece a animacao de atacar
+	#se nao recebe nulo
+	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear:
+		$KinematicBody22D/TouchScreenButton.action = "ui_space"
+	else:
+		$KinematicBody22D/TouchScreenButton.action = ""
+
 #	pass
 
 
 func _on_TouchScreenButton_pressed():
 	#enquanto nao tiver equipado algo na weapon nao comeca o timer
-	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null:
+	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear:
 		$Timer.start(-1) # iniciando o timer para iniciar a batalha
+
 
 
 func _on_Timer_timeout():
@@ -35,19 +60,35 @@ func _on_Timer_timeout():
 	var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
 	var maniSkills = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")
 
-	mani[0]["life"] -=  attack # recebendo o ataque do scorpion
 
 
 	# entregando dano ao scorpion
-	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null:
-		life -= int(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"]) 
+	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear:
+		life -= int(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"])
 		maniSkills[0]["attack"] += 0.1
+		mani[0]["life"] -=  attack # recebendo o ataque do scorpion
 
 	#atualizando o status do personagem
 	manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani) 
 	manipulation_acess_dd.set_save(manipulation_acess_dd.path_skills, maniSkills)
+
 	#morte scorpion
 	if life <= 0:
+		#$Timer.stop()
 		queue_free()
 
+	pass # Replace with function body.
+
+
+# funcao para só comecar a atacar quando tiver perto
+func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	if body.name == "KinematicBody2D":
+		flagNear = true
+	pass # Replace with function body.
+
+
+func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	if body.name == "KinematicBody2D":
+		flagNear = false
+		$Timer.stop()
 	pass # Replace with function body.

@@ -103,10 +103,7 @@ func _on_ButtonSkills_pressed():
 	$optionsLayout/ItemListBag.visible = false
 	$optionsLayout/ItemListEquip.visible = false
 	$optionsLayout/ButtonExit.visible = false
-	
-	#colocando o level das skills ao lado do icon
-	#$optionsLayout/ItemListSkills.set_item_text(0, "Attack: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[0]['attack']))
-	#$optionsLayout/ItemListSkills.set_item_text(1, "Defense: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[1]['defense']))
+
 	if $optionsLayout/ItemListSkills.visible:
 		$optionsLayout/ItemListSkills.visible = false
 	else:

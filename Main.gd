@@ -18,11 +18,38 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
+
 #	pass
 
 
 
 const spaw_spider = preload("res://Scorpion.tscn")
+var limit = 1
+
 func _on_TimerScorpion_timeout():
-	add_child(spaw_spider.instance())
+	if limit <= 5:
+		add_child(spaw_spider.instance())
+		limit += 1
+
+
 	pass # Replace with function body.
+
+
+
+func _on_Main_child_exiting_tree(node):
+	
+	if node.is_in_group("Scorpion"):
+		# se for o scorpion que morreu o limit recebe -1
+		limit -= 1  #toda vez que morrer um nasce outro
+
+
+		if $KinematicBody2D/AnimatedSprite.animation == "up_attack":
+			$KinematicBody2D/AnimatedSprite.play("up_idle")
+		elif $KinematicBody2D/AnimatedSprite.animation == "down_attack":
+			$KinematicBody2D/AnimatedSprite.play("down_idle")
+		elif $KinematicBody2D/AnimatedSprite.animation == "side_attack":
+			$KinematicBody2D/AnimatedSprite.play("side_idle")
+
+	pass # Replace with function body.
+
+

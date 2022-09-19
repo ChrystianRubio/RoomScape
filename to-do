@@ -54,7 +54,8 @@ Passo a passo:
 	mas nao podemos simplesmente mudar pq null é verificação para muitas coisas
 
 Arrumar:
-	
+		temos um bug no movimento touch screen com os bichos itens
+		eles estao se encontrando...
 
 estou pensando em ter apenas duas funcoes que irao mexer com o banco de dados
 passando o path e valores default e tambem valor de manipulação como paramentros pra elas
