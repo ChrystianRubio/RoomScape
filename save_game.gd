@@ -4,10 +4,10 @@ class_name SaveGame
 
 # O caminho dos saves 
 var path_game_events = "user://game_events3.save"
-var path_bag = "user://character_bag54.save"
-var path_skills = "user://character_skills10.save"
-var path_equip = "user://character_equip35.save"
-var path_status_character = "user://character_status7.save"
+var path_bag = "user://character_bag55.save"
+var path_skills = "user://character_skills11.save"
+var path_equip = "user://character_equip36.save"
+var path_status_character = "user://character_status8.save"
 
 
 

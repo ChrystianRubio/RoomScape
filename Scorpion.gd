@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 
 # Declare member variables here. Examples:
@@ -13,7 +13,7 @@ var flagNear = false #uma flag para conseguir somente atacar quando estiver pert
 # Called when the node enters the scene tree for the first time.
 func _ready():
 
-	$KinematicBody22D/AnimatedSprite.play("idle")
+	$AnimatedSprite.play("idle")
 	
 	#inicializando o valor max da vida 
 	$TextureProgress.max_value = life
@@ -28,7 +28,7 @@ var velocity = Vector2()
 func _physics_process(delta):
 	velocity = Vector2()
 	velocity = velocity.normalized() * 100
-	#velocity = move_and_slide(velocity)
+	velocity = move_and_slide(velocity)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -41,9 +41,9 @@ func _process(delta):
 	#verificando se tiver arma equipada o screenAction recece a animacao de atacar
 	#se nao recebe nulo
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear:
-		$KinematicBody22D/TouchScreenButton.action = "ui_space"
+		$TouchScreenButton.action = "ui_space"
 	else:
-		$KinematicBody22D/TouchScreenButton.action = ""
+		$TouchScreenButton.action = ""
 
 #	pass
 
@@ -88,7 +88,10 @@ func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape
 
 
 func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
-	if body.name == "KinematicBody2D":
-		flagNear = false
-		$Timer.stop()
+	if not body: #pra nao crashar se tiver um em cima so outro
+		print('tem nada')
+	else:
+		if body.name == "KinematicBody2D":
+			flagNear = false
+			$Timer.stop()
 	pass # Replace with function body.

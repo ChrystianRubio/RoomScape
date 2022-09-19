@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://assets/Characters/_side walk.png" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://assets/Characters/_down idle.png" type="Texture" id=9]
 [ext_resource path="res://Main.gd" type="Script" id=10]
 [ext_resource path="res://VillageLimit.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scorpion.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/Characters/_side attack.png" type="Texture" id=13]
 [ext_resource path="res://itemsButtonScreen.tscn" type="PackedScene" id=14]
 [ext_resource path="res://assets/Characters/_up attack.png" type="Texture" id=15]
@@ -318,7 +317,7 @@ texture_under = ExtResource( 17 )
 texture_progress = ExtResource( 18 )
 
 [node name="HealthLife" type="Timer" parent="KinematicBody2D"]
-wait_time = 2.0
+wait_time = 15.0
 autostart = true
 
 [node name="Village" parent="." instance=ExtResource( 4 )]
@@ -338,9 +337,6 @@ position = Vector2( -760, -253 )
 [node name="TimerScorpion" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
-
-[node name="Scorpion" parent="." instance=ExtResource( 12 )]
-visible = false
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_Main_child_exiting_tree"]
 [connection signal="timeout" from="KinematicBody2D/HealthLife" to="KinematicBody2D" method="_on_HealthLife_timeout"]

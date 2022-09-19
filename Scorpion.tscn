@@ -5,9 +5,6 @@
 [ext_resource path="res://assets/Characters/lifebarRed.png" type="Texture" id=3]
 [ext_resource path="res://assets/Characters/lifebarGreen.png" type="Texture" id=4]
 
-[sub_resource type="CircleShape2D" id=7]
-radius = 9.0
-
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
 atlas = ExtResource( 1 )
@@ -36,12 +33,15 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CircleShape2D" id=7]
+radius = 9.33928
+
 [sub_resource type="CircleShape2D" id=8]
 
 [sub_resource type="CircleShape2D" id=9]
-radius = 10.6667
+radius = 14.0
 
-[node name="Scorpion" type="Node2D" groups=["Scorpion"]]
+[node name="Scorpion" type="KinematicBody2D" groups=["Scorpion"]]
 position = Vector2( 0, -1 )
 scale = Vector2( 1.5, 1.5 )
 z_index = -2
@@ -50,22 +50,20 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Timer" type="Timer" parent="."]
-
-[node name="KinematicBody22D" type="KinematicBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody22D"]
-position = Vector2( 0, 1 )
-shape = SubResource( 7 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody22D"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 5 )
 animation = "idle"
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="KinematicBody22D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
+shape = SubResource( 7 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 position = Vector2( -9, -8 )
 scale = Vector2( 0.892362, 0.88 )
 shape = SubResource( 8 )
+
+[node name="Timer" type="Timer" parent="."]
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
 margin_left = -13.0
@@ -83,7 +81,7 @@ texture_progress = ExtResource( 4 )
 position = Vector2( 0, 0.666667 )
 shape = SubResource( 9 )
 
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="pressed" from="KinematicBody22D/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
 [connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
 [connection signal="body_shape_exited" from="Area2D" to="." method="_on_Area2D_body_shape_exited"]
