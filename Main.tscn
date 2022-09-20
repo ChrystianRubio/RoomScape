@@ -284,8 +284,11 @@ position = Vector2( 488, 304 )
 script = ExtResource( 10 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( -1807, -43 )
+position = Vector2( -872, -205 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( -7, 6 )

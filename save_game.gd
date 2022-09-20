@@ -4,10 +4,10 @@ class_name SaveGame
 
 # O caminho dos saves 
 var path_game_events = "user://game_events3.save"
-var path_bag = "user://character_bag55.save"
-var path_skills = "user://character_skills11.save"
-var path_equip = "user://character_equip36.save"
-var path_status_character = "user://character_status8.save"
+var path_bag = "user://character_bag67.save"
+var path_skills = "user://character_skills13.save"
+var path_equip = "user://character_equip108.save"
+var path_status_character = "user://character_status9.save"
 
 
 
@@ -58,13 +58,14 @@ func setValue_skills_manipulation(var value_skills_manipulation):
 # bag
 
 var default_value_bag = {
-	0: {"name": null},
-	1: {"name": null},
-	2: {"name": null},
-	3: {"name": null},
-	4: {"name": null},
-	5: {"name": null},
-	6: {"name": null},
+	0: {"name": null, },
+	1: {"name": null, },
+	2: {"name": null, },
+	3: {"name": null, },
+	4: {"name": null, },
+	5: {"name": null, },
+	6: {"name": null, },
+	#6: {"name": null, "weapon": false, "shield": false},
 
 }
 

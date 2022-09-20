@@ -72,7 +72,6 @@ func _physics_process(delta):
 func _process(delta):
 	
 	#mostrando um  progress bar com a vida do personagem
-	$TextureProgress.min_value = 0
 	$TextureProgress.value = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"]
 	$TextureProgress.max_value = 10
 #	pass
@@ -81,7 +80,7 @@ func _process(delta):
 # a cada x tempo o personagem ganha x vida e mostra no log
 func _on_HealthLife_timeout():
 	var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
-	if mani[0]["life"] < 10:
+	if mani[0]["life"] < $TextureProgress.max_value:
 		mani[0]["life"] += 1
 		$Layout/gameEventsLayout/EventsLog.text += manipulation_acess_dd.value_game_events_manipulation["healthLife"] + \
 		" => " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"]) + "\n"

@@ -37,12 +37,12 @@ func _on_TimerScorpion_timeout():
 
 
 func _on_Main_child_exiting_tree(node):
-	
+
 	if node.is_in_group("Scorpion"):
 		# se for o scorpion que morreu o limit recebe -1
 		limit -= 1  #toda vez que morrer um nasce outro
 
-
+		#parar animacao do personagem quando o scorpion morrer
 		if $KinematicBody2D/AnimatedSprite.animation == "up_attack":
 			$KinematicBody2D/AnimatedSprite.play("up_idle")
 		elif $KinematicBody2D/AnimatedSprite.animation == "down_attack":

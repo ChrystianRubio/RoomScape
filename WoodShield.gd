@@ -26,11 +26,6 @@ func _on_WoodShield_pressed():
 			mani[slot_bag] = {"name" : "WoodShield", "damage": 0, "defense": 1, "weapon": false, "shield": true}
 			manipulation_save.set_save(manipulation_save.path_bag,mani)
 			break
-	
-	
-	
-	#print(mani)
-			#manipulation_save.set_save(manipulation_save.path_bag,mani)
-	
-	$".".queue_free()  #destroindo o nó após presionar na sword
+
+	#$".".queue_free()  #destroindo o nó após presionar na sword
 	pass # Replace with function body.

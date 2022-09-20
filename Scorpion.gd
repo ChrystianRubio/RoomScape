@@ -36,8 +36,6 @@ func _process(delta):
 	#mostrando progress bar com a vida 
 	$TextureProgress.value = life
 
-	
-	
 	#verificando se tiver arma equipada o screenAction recece a animacao de atacar
 	#se nao recebe nulo
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear:
@@ -86,10 +84,10 @@ func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape
 		flagNear = true
 	pass # Replace with function body.
 
-
+#funcao para parar de atacar quando sair de perto
 func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
 	if not body: #pra nao crashar se tiver um em cima so outro
-		print('tem nada')
+		pass
 	else:
 		if body.name == "KinematicBody2D":
 			flagNear = false
