@@ -67,28 +67,37 @@ func _process(delta):
 				if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["weapon"]:
 					#estou equipando e ao mesto tempo salvando no banco de dados
 					#o equip esta recebendo onde eu to clicando na bag e armazendo nele o resultado
-					#somente se o equip estiver nullo
+					#somente se o equip estiver nulo
 					if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] == null:
-						manipulation_acess_dd.equip_manipulation[2] = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]
+						#maniEquip é pra pegar no banco de dados o mais recente
+						var maniEquip = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")
+						maniEquip[2] = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]
 						print(manipulation_acess_dd.equip_manipulation[2])
-						manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, manipulation_acess_dd.equip_manipulation)
+						manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, maniEquip)
 						#somente se equip estiver nulo é que vamos tirar da bag
 						var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
 						mani[slot_bag] = manipulation_acess_dd.default_value_bag[slot_bag]
 						manipulation_acess_dd.set_save(manipulation_acess_dd.path_bag, mani)
+					else:
+						$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["already_equipped"] + "\n"
 
 				#se for do tipo shield, equipa no lugar correto
 				elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["shield"]:
 					#estou equipando e ao mesto tempo salvando no banco de dados
 					#o equip esta recebendo onde eu to clicando na bag e armazendo nele o resultado
-					#somente se o equip estiver nullo
+					#somente se o equip estiver nulo
 					if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["shield"] == null:
-						manipulation_acess_dd.equip_manipulation[3] = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]
-						manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, manipulation_acess_dd.equip_manipulation)
+						#maniEquip é pra pegar no banco de dados o mais recente
+						var maniEquip = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")
+						maniEquip[3] = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]
+						print(manipulation_acess_dd.equip_manipulation[3])
+						manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, maniEquip)
 						#somente se equip estiver nulo é que vamos tirar da bag
 						var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
 						mani[slot_bag] = manipulation_acess_dd.default_value_bag[slot_bag]
 						manipulation_acess_dd.set_save(manipulation_acess_dd.path_bag, mani)
+					else:
+						$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["already_equipped"] + "\n"
 
 
 
@@ -105,38 +114,25 @@ func _process(delta):
 				if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[slot_bag]) != \
 				str(manipulation_acess_dd.default_value_equip[slot_bag]):
 					var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")
-					mani[slot_bag] = manipulation_acess_dd.default_value_equip[slot_bag]
-					print(mani)
-					manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, mani)
-			
-"""
-		# DESEQUIPAR E AQUI E NAO TA FUNCIONANDO CORRETAMENTE
-		#pq 5 e o total de slot do equip
-		if slot_bag < 5:
-			#selecionando itens para desequipar
-			if $optionsLayout/ItemListEquip.is_selected(slot_bag):
-			#	#importante deselecionar logo depois
-				$optionsLayout/ItemListEquip.unselect(slot_bag)
+					var maniBag = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
+
+					#voltando o objeto para a bag
+					for slot_bag_back in range(0, 7):
+						if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag_back]) == \
+						str(manipulation_acess_dd.default_value_bag[slot_bag_back]):
+							maniBag[slot_bag_back] = mani[slot_bag]
+							manipulation_acess_dd.set_save(manipulation_acess_dd.path_bag, maniBag)
+
+							#liberando o slot do equip 
+							#porem o slot do equip só é liberado se tiver espaço na bag
+							mani[slot_bag] = manipulation_acess_dd.default_value_equip[slot_bag]
+							manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, mani)
+							break # se achar um slot vazio ja para a procura
 				
-				#a verificacao aqui será feita banco de dados do equip
-				if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null:
-					mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")
-					mani[slot_bag] = manipulation_acess_dd.default_value_equip[slot_bag] #recebendo nulo no equip que foi selecionado para desequipar 
-					manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, mani)
-
-				elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["shield"] != null:
-					mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")
-					mani[slot_bag] = manipulation_acess_dd.default_value_equip[slot_bag] #recebendo nulo no equip que foi selecionado para desequipar 
-					manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, mani)
-
-
-"""
-	# tera que ter um if para cada parte do equip
-	# se for diferente de nulo entra no if
-	# é necessario esse if pq o [][tipo] so existe depois que colocarmos um equip
-	
-
-
+						#se caso nao tiver slot, informe ao usuario isso no log events
+						else:
+							if slot_bag_back == 6:
+								$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["no_empty_slots"] + "\n"
 
 
 # botao config presionado

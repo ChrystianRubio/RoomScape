@@ -51,6 +51,7 @@ margin_top = 0.58139
 margin_right = 304.262
 margin_bottom = 195.581
 rect_scale = Vector2( 0.13, 0.2 )
+scroll_following = true
 
 [node name="ButtonBag" type="Button" parent="."]
 margin_left = 50.0

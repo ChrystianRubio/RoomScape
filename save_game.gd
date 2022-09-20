@@ -3,11 +3,11 @@ extends Node
 class_name SaveGame
 
 # O caminho dos saves 
-var path_game_events = "user://game_events3.save"
-var path_bag = "user://character_bag67.save"
-var path_skills = "user://character_skills13.save"
-var path_equip = "user://character_equip108.save"
-var path_status_character = "user://character_status9.save"
+var path_game_events = "user://game_events6.save"
+var path_bag = "user://character_bag70.save"
+var path_skills = "user://character_skills14.save"
+var path_equip = "user://character_equip111.save"
+var path_status_character = "user://character_status10.save"
 
 
 
@@ -21,6 +21,8 @@ var default_value_game_events = {
 	"damage": "you are taking damage",
 	"hit": "you are hitting",
 	"healthLife": "+1 health",
+	"no_empty_slots": "don't have any empty slots",
+	"already_equipped": "you already have something equipped",
 
 }
 
