@@ -87,9 +87,10 @@ func _process(delta):
 func _on_HealthLife_timeout():
 	var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
 	if mani[0]["life"] < manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[1]["max_life"]:
-		$Layout/gameEventsLayout/EventsLog.text += manipulation_acess_dd.value_game_events_manipulation["healthLife"] + \
-		" => " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"]) + "\n"
 		mani[0]["life"] += 1
+		$Layout/gameEventsLayout/EventsLog.text += manipulation_acess_dd.value_game_events_manipulation["healthLife"] + \
+		" => " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"] + 1) + "\n"
+		
 
 	manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
 	pass # Replace with function body.

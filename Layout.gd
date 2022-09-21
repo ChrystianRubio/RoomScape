@@ -113,8 +113,6 @@ func _process(delta):
 				$optionsLayout/ItemListEquip.unselect(slot_bag)
 
 
-
-
 				#se o que eu selecionei for diferente de nulo, entao desequipa ele
 				if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[slot_bag]) != \
 				str(manipulation_acess_dd.default_value_equip[slot_bag]):
@@ -140,16 +138,27 @@ func _process(delta):
 							if slot_bag_back == 6:
 								$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["no_empty_slots"] + "\n"
 
-	#equips funcionando
+
+
+#	#equips funcionando
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["shield"] != null:
 		mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
-		mani[1]["max_life"] = manipulation_acess_dd.default_value_status[0]["life"] + manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["defense"] 
+		#se a vida ja tiver cheia e vc equipar um shield, vida fica full junto com a proteção
+		if mani[0]["life"] == mani[1]["max_life"]:
+			mani[1]["max_life"] = manipulation_acess_dd.default_value_status[0]["life"] + manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["defense"]
+			mani[0]["life"] = mani[1]["max_life"]
+		else:
+			mani[1]["max_life"] = manipulation_acess_dd.default_value_status[0]["life"] + manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["defense"]
 		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
+
 	else: #volta ao default life e max life
 		mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
-		mani[1]["max_life"] = manipulation_acess_dd.default_value_status[1]["max_life"] 
-		#mani[0]["life"] = mani[1]["max_life"]
+		mani[1]["max_life"] = manipulation_acess_dd.default_value_status[1]["max_life"]
+		# se a vida for maior que o max life atualizado, life recebe o atual max_life
+		if mani[0]["life"] > mani[1]["max_life"]:
+			mani[0]["life"] = mani[1]["max_life"]
 		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
+
 
 # botao config presionado
 func _on_ButtonConfig_pressed():

@@ -320,7 +320,7 @@ texture_under = ExtResource( 17 )
 texture_progress = ExtResource( 18 )
 
 [node name="HealthLife" type="Timer" parent="KinematicBody2D"]
-wait_time = 15.0
+wait_time = 3.0
 autostart = true
 
 [node name="Village" parent="." instance=ExtResource( 4 )]
