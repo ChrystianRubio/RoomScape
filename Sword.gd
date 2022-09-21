@@ -32,5 +32,5 @@ func _on_Sword_pressed():
 	
 
 	
-	#$".".queue_free()  #destroindo o nó após presionar na sword
+	$".".queue_free()  #destroindo o nó após presionar na sword
 	pass # Replace with function body.

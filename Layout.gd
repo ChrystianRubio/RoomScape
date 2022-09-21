@@ -40,7 +40,7 @@ func _process(delta):
 
 	
 	#colocando as skiils corretas no layout skills
-	$optionsLayout/ItemListSkills.set_item_text(0, "Fight: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[0]['attack']))
+	$optionsLayout/ItemListSkills.set_item_text(0, "Fight: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[0]['fight']))
 	$optionsLayout/ItemListSkills.set_item_text(1, "Defense: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[1]['defense']))
 	
 	
@@ -72,12 +72,13 @@ func _process(delta):
 						#maniEquip é pra pegar no banco de dados o mais recente
 						var maniEquip = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")
 						maniEquip[2] = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]
-						print(manipulation_acess_dd.equip_manipulation[2])
+						#print(manipulation_acess_dd.equip_manipulation[2])
 						manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, maniEquip)
 						#somente se equip estiver nulo é que vamos tirar da bag
-						var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
+						mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
 						mani[slot_bag] = manipulation_acess_dd.default_value_bag[slot_bag]
 						manipulation_acess_dd.set_save(manipulation_acess_dd.path_bag, mani)
+						$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["gain_weapon"] + "\n"
 					else:
 						$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["already_equipped"] + "\n"
 
@@ -90,12 +91,13 @@ func _process(delta):
 						#maniEquip é pra pegar no banco de dados o mais recente
 						var maniEquip = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")
 						maniEquip[3] = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]
-						print(manipulation_acess_dd.equip_manipulation[3])
 						manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, maniEquip)
 						#somente se equip estiver nulo é que vamos tirar da bag
-						var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
+						mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
 						mani[slot_bag] = manipulation_acess_dd.default_value_bag[slot_bag]
 						manipulation_acess_dd.set_save(manipulation_acess_dd.path_bag, mani)
+						$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["gain_shield"] + "\n"
+
 					else:
 						$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["already_equipped"] + "\n"
 
@@ -110,10 +112,13 @@ func _process(delta):
 				#deseleciona para nao dar problemas futuros
 				$optionsLayout/ItemListEquip.unselect(slot_bag)
 
+
+
+
 				#se o que eu selecionei for diferente de nulo, entao desequipa ele
 				if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[slot_bag]) != \
 				str(manipulation_acess_dd.default_value_equip[slot_bag]):
-					var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")
+					mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")
 					var maniBag = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
 
 					#voltando o objeto para a bag
@@ -127,6 +132,7 @@ func _process(delta):
 							#porem o slot do equip só é liberado se tiver espaço na bag
 							mani[slot_bag] = manipulation_acess_dd.default_value_equip[slot_bag]
 							manipulation_acess_dd.set_save(manipulation_acess_dd.path_equip, mani)
+							
 							break # se achar um slot vazio ja para a procura
 				
 						#se caso nao tiver slot, informe ao usuario isso no log events
@@ -134,6 +140,16 @@ func _process(delta):
 							if slot_bag_back == 6:
 								$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["no_empty_slots"] + "\n"
 
+	#equips funcionando
+	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["shield"] != null:
+		mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
+		mani[1]["max_life"] = manipulation_acess_dd.default_value_status[0]["life"] + manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["defense"] 
+		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
+	else: #volta ao default life e max life
+		mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
+		mani[1]["max_life"] = manipulation_acess_dd.default_value_status[1]["max_life"] 
+		#mani[0]["life"] = mani[1]["max_life"]
+		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
 
 # botao config presionado
 func _on_ButtonConfig_pressed():

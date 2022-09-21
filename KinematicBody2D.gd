@@ -12,6 +12,7 @@ var manipulation_acess_dd = SaveGame.new()
 #	pass # Replace with function body.
 
 export (int) var speed = 200
+var max_life = 10
 
 var velocity = Vector2()
 
@@ -71,19 +72,24 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	#morte do pesonagem
+	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"] <= 0:
+		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, manipulation_acess_dd.default_value_status)
+		get_tree().change_scene("res://Death_City.tscn")
+	
 	#mostrando um  progress bar com a vida do personagem
-	$TextureProgress.value = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"]
-	$TextureProgress.max_value = 10
+	$TextureProgress.value =  manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"]
+	$TextureProgress.max_value = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[1]["max_life"]
 #	pass
 
 
 # a cada x tempo o personagem ganha x vida e mostra no log
 func _on_HealthLife_timeout():
 	var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
-	if mani[0]["life"] < $TextureProgress.max_value:
-		mani[0]["life"] += 1
+	if mani[0]["life"] < manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[1]["max_life"]:
 		$Layout/gameEventsLayout/EventsLog.text += manipulation_acess_dd.value_game_events_manipulation["healthLife"] + \
 		" => " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"]) + "\n"
+		mani[0]["life"] += 1
 
 	manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
 	pass # Replace with function body.

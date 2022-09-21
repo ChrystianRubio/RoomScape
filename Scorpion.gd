@@ -63,7 +63,8 @@ func _on_Timer_timeout():
 	# entregando dano ao scorpion
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear:
 		life -= int(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"])
-		maniSkills[0]["attack"] += 0.1
+		maniSkills[0]["fight"] += 0.1
+		maniSkills[1]["defense"] += 0.1
 		mani[0]["life"] -=  attack # recebendo o ataque do scorpion
 
 	#atualizando o status do personagem

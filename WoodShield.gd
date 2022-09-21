@@ -27,5 +27,5 @@ func _on_WoodShield_pressed():
 			manipulation_save.set_save(manipulation_save.path_bag,mani)
 			break
 
-	#$".".queue_free()  #destroindo o nó após presionar na sword
+	$".".queue_free()  #destroindo o nó após presionar na sword
 	pass # Replace with function body.

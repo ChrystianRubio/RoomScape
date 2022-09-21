@@ -284,7 +284,7 @@ position = Vector2( 488, 304 )
 script = ExtResource( 10 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( -872, -205 )
+position = Vector2( -2053, -96 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true

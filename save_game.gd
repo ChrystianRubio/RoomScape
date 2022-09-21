@@ -3,11 +3,11 @@ extends Node
 class_name SaveGame
 
 # O caminho dos saves 
-var path_game_events = "user://game_events6.save"
-var path_bag = "user://character_bag70.save"
-var path_skills = "user://character_skills14.save"
-var path_equip = "user://character_equip111.save"
-var path_status_character = "user://character_status10.save"
+var path_game_events = "user://game_events10.save"
+var path_bag = "user://character_bag74.save"
+var path_skills = "user://character_skills16.save"
+var path_equip = "user://character_equip115.save"
+var path_status_character = "user://character_status22.save"
 
 
 
@@ -23,6 +23,9 @@ var default_value_game_events = {
 	"healthLife": "+1 health",
 	"no_empty_slots": "don't have any empty slots",
 	"already_equipped": "you already have something equipped",
+	"gain_shield": "you equipped a shield",
+	"gain_weapon": "you equipped a weapon",
+	"lost_bag": "you lost everything in your bag",
 
 }
 
@@ -41,7 +44,7 @@ func setValue_game_events_manipulation(var value_game_events_manipulation):
 # skills
 
 var default_value_skills = {
-	0: {"attack": 0},
+	0: {"fight": 0},
 	1: {"defense": 0},
 }
 
@@ -109,6 +112,7 @@ func setEquip_manipulation(var equip_manipulation):
 
 var default_value_status = {
 	0: {"life": 10},
+	1: {"max_life": 10},
 }
 
 var status_manipulation = acess_save(path_status_character, default_value_status)
