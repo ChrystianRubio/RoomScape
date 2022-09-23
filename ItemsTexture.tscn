@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/435_0.png" type="Texture" id=1]
 [ext_resource path="res://assets/woodShield.png" type="Texture" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://assets/helmet_01a.png" type="Texture" id=5]
 [ext_resource path="res://assets/boots_01a.png" type="Texture" id=6]
 [ext_resource path="res://assets/armor_01a.png" type="Texture" id=7]
+[ext_resource path="res://assets/1042_1.png" type="Texture" id=8]
+[ext_resource path="res://assets/1717_0.png" type="Texture" id=9]
+[ext_resource path="res://assets/meet.png" type="Texture" id=10]
 
 [node name="ItemsTexture" type="Control"]
 anchor_right = 1.0
@@ -56,3 +59,21 @@ visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 4 )
+
+[node name="EquipOptions" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 8 )
+
+[node name="OutOptions" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 9 )
+
+[node name="meet" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 10 )

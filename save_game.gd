@@ -3,11 +3,11 @@ extends Node
 class_name SaveGame
 
 # O caminho dos saves 
-var path_game_events = "user://game_events10.save"
-var path_bag = "user://character_bag74.save"
-var path_skills = "user://character_skills16.save"
-var path_equip = "user://character_equip115.save"
-var path_status_character = "user://character_status22.save"
+var path_game_events = "user://game_events15.save"
+var path_bag = "user://character_bag79.save"
+var path_skills = "user://character_skills21save"
+var path_equip = "user://character_equip118.save"
+var path_status_character = "user://character_status27.save"
 
 
 
@@ -26,7 +26,8 @@ var default_value_game_events = {
 	"gain_shield": "you equipped a shield",
 	"gain_weapon": "you equipped a weapon",
 	"lost_bag": "you lost everything in your bag",
-
+	"full": "you are full",
+	"ate the food": "you ate the food",
 }
 
 var value_game_events_manipulation = acess_save(path_game_events, default_value_game_events)

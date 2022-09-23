@@ -6,39 +6,32 @@ extends KinematicBody2D
 var manipulation_acess_dd = SaveGame.new()
 
 
-var attack = 2
-var life = 4
+var attack = 3
+var life = 10
 var flagNear = false #uma flag para conseguir somente atacar quando estiver perto
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
 	$AnimatedSprite.play("idle")
-	
 	#inicializando o valor max da vida 
 	$TextureProgress.max_value = life
 	
 	#posicao x e y aleatoria
-	position.x = rand_range(-2404, -2748)
-	position.y = rand_range(6, 227)
+	position.x = rand_range(130, 1100)
+	position.y = rand_range(72, 686)
 
 	pass # Replace with function body.
 
-var velocity = Vector2()
-func _physics_process(delta):
-	velocity = Vector2()
-	velocity = velocity.normalized() * 100
-	velocity = move_and_slide(velocity)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	#mostrando progress bar com a vida 
 	$TextureProgress.value = life
 
 	#verificando se tiver arma equipada o screenAction recece a animacao de atacar
 	#se nao recebe nulo
-	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear and life >= 1:
+	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear:
 		$TouchScreenButton.action = "ui_space"
 	else:
 		$TouchScreenButton.action = ""
@@ -50,9 +43,10 @@ func _on_TouchScreenButton_pressed():
 	#enquanto nao tiver equipado algo na weapon nao comeca o timer
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear:
 		$Timer.start(-1) # iniciando o timer para iniciar a batalha
+		$AnimatedSprite.play("attack") #iniciando aqui por questao de sincronia com o ataque real
+	pass # Replace with function body.
 
 
-#sistema de luta
 func _on_Timer_timeout():
 	# mani é so pra ficar mais facil/curto a manipulacao
 	var mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
@@ -60,37 +54,42 @@ func _on_Timer_timeout():
 
 
 
-	# entregando dano ao scorpion
-	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear:
+	# entregando dano 
+	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear and life >= 1:
 		life -= int(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"])
-		maniSkills[0]["fight"] += 0.1
-		maniSkills[1]["defense"] += 0.1
-		mani[0]["life"] -=  attack # recebendo o ataque do scorpion
+		maniSkills[0]["fight"] += 1
+		maniSkills[1]["defense"] += 1
+		mani[0]["life"] -=  attack # recebendo o ataque do bicho
 
 	#atualizando o status do personagem
 	manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani) 
 	manipulation_acess_dd.set_save(manipulation_acess_dd.path_skills, maniSkills)
 
-	#morte scorpion
+	#morte 
 	if life <= 0:
 		#$Timer.stop()
-		queue_free()
+		$AnimatedSprite.play("death")
+		if $AnimatedSprite.frame == 23:
+			queue_free()
 
 	pass # Replace with function body.
 
 
-# funcao para só comecar a atacar quando tiver perto
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.name == "KinematicBody2D":
 		flagNear = true
 	pass # Replace with function body.
 
-#funcao para parar de atacar quando sair de perto
+
 func _on_Area2D_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
 	if not body: #pra nao crashar se tiver um em cima so outro
 		pass
 	else:
 		if body.name == "KinematicBody2D":
-			flagNear = false
-			$Timer.stop()
+			#somente para a animação e morte se life nao for igual a 0
+			#pq nao queremos esperar a animacao acabar pra poder sair..
+			if not life <= 0:
+				flagNear = false
+				$AnimatedSprite.play("idle")
+				$Timer.stop()
 	pass # Replace with function body.

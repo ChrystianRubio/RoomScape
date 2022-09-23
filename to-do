@@ -1,72 +1,54 @@
 
+padrao:
+	dicionario dos itens:
+			"name" : "WoodShield", "damage": 0, "defense": 1, "weapon": false, "shield": true, "food": false
 
 
-botao de sair esta bem feio arrumar..
-
-banco de dados save_native_godot(simples e nao estamos nos importando com segurança no momento)
-
-
-colocar as skills(programacao):
-	attack
-	defense
-
-
-colocar a bag(programaçao): 
-	OK
-	
 
 Passo a passo:
-	colocar as skills | OK
-	colocar a bag: OK
-		colocar pelo menos um item para gente ver a bag funcionando e posteriormente equip
-
-		botao de abrir a bag agora ja pode funcionar 
-		total de slots da bag: 7
-		o icon  na bag tem que ser automatico
-		o save da bag sera um dict com key 0 1 2 3 .. 6 
-		para colocar na bag do menu automaticamente é só fazer um laco correndo pelas
-		keys e acessando o nome
-		arrumar aonde o objeto vai aparecer na bag(0,1,2,3,4 ... 7)
-		tem que aparecer aonde estiver vazio
-		no caso da sword1 ela sempre esta aparecendo no slot0
-		a ideia é fazer uma verificaçaõ se existe algo ou nao
-		se nao existir é colocado lá
-
-	os screenbutoon botom das coisas nao vao ficar separados pq senao vai ficar muito baguncado
-		vou fazer uma unificacao das screebnutton que sejam itens
-		como fiz com a itemsTexture
-
-	colocar os equipamentos que o personagem esta usando:
-		precisamos fazer um banco de dados para ele
 	
-	fazer um for para acessar nossa bag para sabermos o que é tal coisa quando clicarmos pelo item list
-	dessa forma conseguimos pegar(pq os itens da bag so tem icon e mais nada, porem o banco de dados da
-	bag tem as coisas verdadeiras)
-	quando clicar e escolher na bag layout , vai fazer uma procura no banco de dados da bag
-	e achar seu correspondente, assim equipando ou posteriormente jogando fora/usando 
+	item Consumivel:
+		sera um ScreenButton com area2d e collison shape(pode colocar grupos tbm)
+		mude seu z_index para -2
+		copia quase igual o script da sword
+		muda o valor do dicionario(que vai pra bag)
+		coloque esse novo objeto screen em itemsTexture(instance)
+		
+		criar no Layout.gd a flag de instancia e a flag de posicao correta no começo do script
+		no Layout.gd na area de aparecer na bag o icone
+		modifique para aparecer na bag o objeto
+		
+		no Layout.gd na area de equipar/usar
+		coloque o que o item ira fazer quando vc clica nele na bag
+		no caso de um item consumivel, o que ele vai fazer quando for consumivel
+		tirar da bag depois
 
-	colocar log de pegou item
-	colocar log de tomou dano
-	colocar log de atacou
-	
-	colocar o shield pra funcionar em relacao ao ataque dos monstros
-	por default ele fica null gerando assim um problema quando nao temos nada
-	mas nao podemos simplesmente mudar pq null é verificação para muitas coisas
-
-Arrumar:
-		temos um bug no movimento touch screen com os bichos itens
-		eles estao se encontrando...
-
-estou pensando em ter apenas duas funcoes que irao mexer com o banco de dados
-passando o path e valores default e tambem valor de manipulação como paramentros pra elas
-sendo assim temos que ter as variaveis com o path de cada
-e temos quer ter as variaveis com o valores default tambem de cada 
-e temos que ter as variaveis com os valores para manipulação de cada
-
-
-
-ver o botao(funcao de aparecer as msg log de sair) e como sera feito  | RESOLVIDO
-resolvemos da seguinte forma
-fizemos uma classe e vamos trabalhar igualmente como o java(getter e setters, funcao static or not)
-assim todo o projeto tem acesso as coisas,basta instaciar um objeto 
-
+		ir para parte de jogar no chao mais abaixo
+		modificar la
+		
+		
+		ir para main e colocar a instancia do objeto
+		main ou qualquer outra cidade que tenha scipt e que seja pai de personagem
+		
+		no caso do meet ele ira ser instanciado apos um scorpion/animal morrer
+		entao quando um animal morrer eu tenho que colocar la no timeout
+		
+		na main.gd quando um child for instanciado, eu preciso ver se e igual ao grupo do meu objeto
+		e setar seu x e y e seu scale
+		
+	Monstro:
+		kinematicBody, animated, collisin, touch, timer(fight), textureProgress, area2d(lutar de perto) -> Collision da area
+		mude o z index para 1
+		mexa no scale se necessario
+		coloque os grupos corretos
+		coloque um script
+		só copiar do scorpion o script e mudar attack e life 
+		e religar os sinais novamente
+		colocar animacao de ataque do animal(se tiver)
+		
+		as questoes de revivamento e drop são feitos pela cidade
+		crie um timer na cidade, para ser o revivador do monstro
+		crie uma variavel para ser o limit desse bixo
+		colocar o limit do bixo recebendo -1 toda vez que um deles morre
+		
+		

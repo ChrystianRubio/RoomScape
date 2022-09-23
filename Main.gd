@@ -17,30 +17,67 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-
+func _process(delta):
+	
+	#se o personagem jogar algo no chao, esse algo sera filho de main city
+	if $KinematicBody2D/Layout.flag_instance_sword:
+		add_child(preload("res://Sword.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_sword = false
+	
+	if $KinematicBody2D/Layout.flag_instance_wood_shield:
+		add_child(preload("res://WoodShield.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_wood_shield = false
+	
+	if $KinematicBody2D/Layout.flag_instance_meet:
+		add_child(preload("res://Meet.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_meet = false
 #	pass
 
 
 
-const spaw_spider = preload("res://Scorpion.tscn")
-var limit = 1
+var limit_scorpion = 1
+var limit_ant = 1
+var limit_bug = 1
 
 func _on_TimerScorpion_timeout():
-	if limit <= 5:
-		add_child(spaw_spider.instance())
-		limit += 1
+	if limit_scorpion <= 5:
+		add_child(preload("res://Scorpion.tscn").instance())
+		limit_scorpion += 1
 
 
+func _on_TimerAnt_timeout():
+	if limit_ant <= 5:
+		add_child(preload("res://Ant.tscn").instance())
+		limit_ant += 1
 	pass # Replace with function body.
 
 
+func _on_TimerBug_timeout():
+	if limit_bug <= 5:
+		add_child(preload("res://Bug.tscn").instance())
+		limit_bug += 1
+	pass # Replace with function body.
 
+#quando um scorpion morrer ele nos entrga seu x e y para o meet e outros objetos
+var position_node_x = 0
+var position_node_y = 0
 func _on_Main_child_exiting_tree(node):
 
-	if node.is_in_group("Scorpion"):
-		# se for o scorpion que morreu o limit recebe -1
-		limit -= 1  #toda vez que morrer um nasce outro
+	if node.is_in_group("animals"):
+		if node.is_in_group("Scorpion"):
+			# se for o scorpion que morreu o limit do scorpion recebe -1
+			limit_scorpion -= 1  #toda vez que morrer um nasce outro
+		if node.is_in_group("ant"):
+			#se for o ant que morreu limit do ant recebe -1
+			limit_ant -= 1
+		if node.is_in_group("bug"):
+			limit_bug -= 1
+
+
+		#quando um animal morrer, meet aparece no mesmo lugar x e y
+		position_node_x = node.position.x
+		position_node_y = node.position.y
+		add_child(preload("res://Meet.tscn").instance())
 
 		#parar animacao do personagem quando o scorpion morrer
 		if $KinematicBody2D/AnimatedSprite.animation == "up_attack":
@@ -53,3 +90,39 @@ func _on_Main_child_exiting_tree(node):
 	pass # Replace with function body.
 
 
+
+
+func _on_Main_child_entered_tree(node):
+	if node.is_in_group("item"):
+		#necessario mais de um grupo pois as sprites sao de tamanhos diferetentes e precisam
+		# de scale diferentes
+		if node.is_in_group("sword"):
+			node.position.x = $KinematicBody2D.position.x
+			node.position.y = $KinematicBody2D.position.y
+			node.scale.x = 0.3
+			node.scale.y = 0.3
+		elif node.is_in_group("wood_shield"):
+			node.position.x = $KinematicBody2D.position.x
+			node.position.y = $KinematicBody2D.position.y
+			node.scale.x = 1
+			node.scale.y = 1
+		elif node.is_in_group("food"):
+			if node.is_in_group("meet"):
+				node.scale.x = 1
+				node.scale.y = 1
+				#necessario para posicao correta na hora de jogar fora
+				if $KinematicBody2D/Layout.flag_correct_position:
+					node.position.x = $KinematicBody2D.position.x
+					node.position.y = $KinematicBody2D.position.y
+					$KinematicBody2D/Layout.flag_correct_position = false
+				else:
+					node.position.x = position_node_x
+					node.position.y = position_node_y
+					
+
+
+func _on_ColiisonCaveOne_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	if body:
+		if body.name == "KinematicBody2D":
+			get_tree().change_scene("res://CaveOne.tscn")
+	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/skills.png" type="Texture" id=1]
 [ext_resource path="res://assets/equips.png" type="Texture" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://assets/helmet_01a.png" type="Texture" id=14]
 [ext_resource path="res://assets/boots_01a.png" type="Texture" id=15]
 [ext_resource path="res://assets/armor_01a.png" type="Texture" id=16]
+[ext_resource path="res://assets/1717_0.png" type="Texture" id=17]
+[ext_resource path="res://assets/1042_1.png" type="Texture" id=18]
 
 [sub_resource type="RectangleShape2D" id=4]
 
@@ -148,6 +150,23 @@ items = [ "", ExtResource( 14 ), false, "", ExtResource( 16 ), false, "", ExtRes
 allow_reselect = true
 icon_scale = 0.9
 fixed_icon_size = Vector2( 26, 32 )
+
+[node name="ItemOptions" type="ItemList" parent="optionsLayout"]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -11.7801
+margin_top = -36.9767
+margin_right = 24.2199
+margin_bottom = 40.0233
+rect_scale = Vector2( 0.3, 0.316 )
+focus_mode = 0
+items = [ "", ExtResource( 17 ), false, "", ExtResource( 18 ), false ]
+allow_reselect = true
+max_columns = 2
+same_column_width = true
+fixed_column_width = 21
+fixed_icon_size = Vector2( 30, 30 )
 
 [node name="ItemsTexture" parent="." instance=ExtResource( 13 )]
 
