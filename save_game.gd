@@ -3,11 +3,11 @@ extends Node
 class_name SaveGame
 
 # O caminho dos saves 
-var path_game_events = "user://game_events15.save"
-var path_bag = "user://character_bag79.save"
-var path_skills = "user://character_skills21save"
-var path_equip = "user://character_equip118.save"
-var path_status_character = "user://character_status27.save"
+var path_game_events = "user://game_events18.save"
+var path_bag = "user://character_bag82.save"
+var path_skills = "user://character_skills24save"
+var path_equip = "user://character_equip121.save"
+var path_status_character = "user://character_status30.save"
 
 
 

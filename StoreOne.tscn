@@ -1,0 +1,803 @@
+[gd_scene load_steps=97 format=2]
+
+[ext_resource path="res://assetsMap/TwilightVillage_RPG_Tileset.png" type="Texture" id=1]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
+[ext_resource path="res://StoreOne.gd" type="Script" id=3]
+[ext_resource path="res://assetsMap/CaveOne/MainLev2.0.png" type="Texture" id=4]
+[ext_resource path="res://assets/Characters/Generic Male NPCs A.png" type="Texture" id=5]
+[ext_resource path="res://assets/Characters/lifebarRed.png" type="Texture" id=6]
+[ext_resource path="res://assets/Characters/lifebarGreen.png" type="Texture" id=7]
+[ext_resource path="res://assets/Characters/_side walk.png" type="Texture" id=8]
+[ext_resource path="res://assets/Characters/_down idle.png" type="Texture" id=9]
+[ext_resource path="res://assets/Characters/_up idle.png" type="Texture" id=10]
+[ext_resource path="res://assets/Characters/_up walk.png" type="Texture" id=11]
+[ext_resource path="res://assets/Characters/_side idle.png" type="Texture" id=12]
+[ext_resource path="res://assets/Characters/_down walk.png" type="Texture" id=13]
+[ext_resource path="res://assets/Characters/_down attack.png" type="Texture" id=14]
+[ext_resource path="res://assets/Characters/_up attack.png" type="Texture" id=15]
+[ext_resource path="res://assets/Characters/_side attack.png" type="Texture" id=16]
+[ext_resource path="res://Layout.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Gold.tscn" type="PackedScene" id=18]
+
+[sub_resource type="CapsuleShape2D" id=78]
+height = 22.0
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=52]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=53]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=54]
+flags = 4
+atlas = ExtResource( 9 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=55]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=56]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=57]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=58]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=59]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=60]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 64, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=45]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=61]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=62]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=63]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=64]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=65]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=66]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 64, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=67]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=68]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=69]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=70]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=71]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=46]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=47]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=48]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=72]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=73]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=74]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=75]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=76]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 0, 64, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=77]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 64, 64, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=79]
+animations = [ {
+"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ) ],
+"loop": true,
+"name": "down_attack",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ) ],
+"loop": true,
+"name": "down_idle",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 55 ), SubResource( 56 ), SubResource( 57 ), SubResource( 58 ), SubResource( 59 ), SubResource( 60 ) ],
+"loop": true,
+"name": "down_walk",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
+"loop": true,
+"name": "side_attack",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ) ],
+"loop": true,
+"name": "side_idle",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
+"loop": true,
+"name": "side_walk",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 46 ), SubResource( 47 ), SubResource( 48 ) ],
+"loop": true,
+"name": "up_attack",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+"loop": true,
+"name": "up_idle",
+"speed": 4.0
+}, {
+"frames": [ SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ) ],
+"loop": true,
+"name": "up_walk",
+"speed": 4.0
+} ]
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 32, 32, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=18]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=19]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 32, 0, 0, 0, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "TwilightVillage_RPG_Tileset.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 384, 160, 96, 96 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "TwilightVillage_RPG_Tileset.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 480, 416, 160, 128 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 32, 32 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 13 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 18 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 19 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "TwilightVillage_RPG_Tileset.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 480, 288, 96, 64 )
+2/tile_mode = 2
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 32, 32 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 20 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "TwilightVillage_RPG_Tileset.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 384, 320, 96, 128 )
+3/tile_mode = 2
+3/autotile/icon_coordinate = Vector2( 0, 0 )
+3/autotile/tile_size = Vector2( 32, 32 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "TwilightVillage_RPG_Tileset.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 480, 352, 96, 64 )
+4/tile_mode = 2
+4/autotile/icon_coordinate = Vector2( 0, 0 )
+4/autotile/tile_size = Vector2( 32, 32 )
+4/autotile/spacing = 0
+4/autotile/occluder_map = [  ]
+4/autotile/navpoly_map = [  ]
+4/autotile/priority_map = [  ]
+4/autotile/z_index_map = [  ]
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 26 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 26 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "TwilightVillage_RPG_Tileset.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 576, 416, 64, 224 )
+5/tile_mode = 2
+5/autotile/icon_coordinate = Vector2( 0, 0 )
+5/autotile/tile_size = Vector2( 32, 32 )
+5/autotile/spacing = 0
+5/autotile/occluder_map = [  ]
+5/autotile/navpoly_map = [  ]
+5/autotile/priority_map = [  ]
+5/autotile/z_index_map = [  ]
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=29]
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=31]
+0/name = "MainLev2.0.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 512, 352, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 30 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 30 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=80]
+extents = Vector2( 61.508, 15.625 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 800, 480, 80, 120 )
+
+[sub_resource type="SpriteFrames" id=34]
+animations = [ {
+"frames": [ SubResource( 33 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[node name="StoreOne" type="Node2D"]
+position = Vector2( -134, -50 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 476, 306 )
+z_index = 3
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -7, 6 )
+shape = SubResource( 78 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+position = Vector2( -7, 6 )
+frames = SubResource( 79 )
+animation = "up_idle"
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( 158, 43 )
+editor_draw_limits = true
+
+[node name="Layout" parent="KinematicBody2D" instance=ExtResource( 17 )]
+margin_left = -356.0
+margin_top = -264.0
+margin_right = -356.0
+margin_bottom = -264.0
+
+[node name="TextureProgress" type="TextureProgress" parent="KinematicBody2D"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -30.0
+margin_top = -40.0
+margin_right = 20.0
+margin_bottom = 10.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 7 )
+
+[node name="HealthLife" type="Timer" parent="KinematicBody2D"]
+wait_time = 10.0
+autostart = true
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196616, 2, 1, 196617, 2, 1, 196618, 2, 1, 196619, 2, 1, 196620, 2, 1, 196621, 2, 1, 196622, 2, 1, 196623, 2, 1, 196624, 2, 1, 196625, 2, 1, 196626, 2, 1, 196627, 2, 1, 196628, 2, 1, 196629, 2, 1, 196630, 2, 1, 196631, 2, 1, 262152, 2, 1, 262153, 2, 1, 262154, 2, 1, 262155, 2, 1, 262156, 2, 1, 262157, 2, 1, 262158, 2, 1, 262159, 2, 1, 262160, 2, 1, 262161, 2, 1, 262162, 2, 1, 262163, 2, 1, 262164, 2, 1, 262165, 2, 1, 262166, 2, 1, 262167, 2, 1, 327688, 3, 196608, 327689, 3, 196608, 327690, 3, 196608, 327691, 3, 196608, 327692, 3, 196608, 327693, 3, 196608, 327694, 3, 196608, 327695, 3, 196608, 327696, 3, 196608, 327697, 3, 196608, 327698, 3, 196608, 327699, 3, 196608, 327700, 3, 196608, 327701, 3, 196608, 327702, 3, 196608, 327703, 3, 196608, 393224, 3, 196608, 393225, 3, 196608, 393226, 3, 196608, 393227, 3, 196608, 393229, 3, 196608, 393230, 3, 196608, 393231, 3, 196608, 393232, 3, 196608, 393233, 3, 196608, 393234, 3, 196608, 393235, 3, 196608, 393236, 3, 196608, 393237, 3, 196608, 393238, 3, 196608, 393239, 3, 196608, 458760, 3, 196608, 458761, 3, 196608, 458762, 3, 196608, 458763, 3, 196608, 458764, 3, 196608, 458765, 3, 196608, 458766, 3, 196608, 458767, 3, 196608, 458768, 3, 196608, 458769, 3, 196608, 458770, 3, 196608, 458771, 3, 196608, 458772, 3, 196608, 458773, 3, 196608, 458774, 3, 196608, 458775, 3, 196608, 524296, 3, 196608, 524297, 3, 196608, 524298, 3, 196608, 524299, 3, 196608, 524300, 3, 196608, 524301, 3, 196608, 524302, 3, 196608, 524303, 3, 196608, 524305, 3, 196608, 524306, 3, 196608, 524307, 3, 196608, 524308, 3, 196608, 524309, 3, 196608, 524310, 3, 196608, 524311, 3, 196608, 589832, 3, 196608, 589833, 3, 196608, 589834, 3, 196608, 589835, 3, 196608, 589836, 3, 196608, 589837, 3, 196608, 589838, 3, 196608, 589839, 3, 196608, 589840, 3, 196608, 589841, 3, 196608, 589842, 3, 196608, 589843, 3, 196608, 589844, 3, 196608, 589845, 3, 196608, 589846, 3, 196608, 589847, 3, 196608, 655368, 3, 196608, 655369, 3, 196608, 655370, 3, 196608, 655371, 3, 196608, 655372, 3, 196608, 655373, 3, 196608, 655374, 3, 196608, 655375, 3, 196608, 655376, 3, 196608, 655377, 3, 196608, 655378, 3, 196608, 655379, 3, 196608, 655380, 3, 196608, 655381, 3, 196608, 655382, 3, 196608, 655383, 3, 196608, 720904, 3, 196608, 720905, 3, 196608, 720906, 3, 196608, 720907, 3, 196608, 720908, 3, 196608, 720909, 3, 196608, 720910, 3, 196608, 720911, 3, 196608, 720912, 3, 196608, 720913, 3, 196608, 720914, 3, 196608, 720915, 3, 196608, 720916, 3, 196608, 720917, 3, 196608, 720918, 3, 196608, 720919, 3, 196608, 786440, 3, 196608, 786441, 3, 196608, 786442, 3, 196608, 786443, 3, 196608, 786444, 3, 196608, 786445, 3, 196608, 786446, 3, 196608, 786447, 3, 196608, 786448, 3, 196608, 786449, 3, 196608, 786450, 3, 196608, 786451, 3, 196608, 786452, 3, 196608, 786453, 3, 196608, 786454, 3, 196608, 786455, 3, 196608, 851976, 3, 196608, 851977, 3, 196608, 851978, 3, 196608, 851979, 3, 196608, 851980, 3, 196608, 851981, 3, 196608, 851982, 3, 196608, 851983, 3, 196608, 851984, 3, 196608, 851985, 3, 196608, 851986, 3, 196608, 851987, 3, 196608, 851988, 3, 196608, 851989, 3, 196608, 851990, 3, 196608, 851991, 3, 196608, 917512, 3, 196608, 917513, 3, 196608, 917514, 3, 196608, 917515, 3, 196608, 917516, 3, 196608, 917517, 3, 196608, 917518, 3, 196608, 917519, 3, 196608, 917520, 3, 196608, 917521, 3, 196608, 917522, 3, 196608, 917523, 3, 196608, 917524, 3, 196608, 917525, 3, 196608, 917526, 3, 196608, 917527, 3, 196608, 983048, 3, 196608, 983049, 3, 196608, 983050, 3, 196608, 983051, 3, 196608, 983052, 3, 196608, 983053, 3, 196608, 983054, 3, 196608, 983055, 3, 196608, 983056, 3, 196608, 983057, 3, 196608, 983058, 3, 196608, 983059, 3, 196608, 983060, 3, 196608, 983061, 3, 196608, 983062, 3, 196608, 983063, 3, 196608, 1048590, 3, 65538 )
+
+[node name="TileMapDecoration" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196618, 1, 131072, 196619, 1, 65536, 196624, 5, 0, 196630, 5, 1, 262154, 1, 65536, 262155, 1, 131072, 262161, 1, 196611, 262162, 1, 196611, 262163, 1, 196611, 262164, 1, 196611, 262165, 1, 196611, 262166, 1, 196611, 327688, 3, 196608, 327689, 3, 196608, 327690, 3, 196608, 327691, 3, 196608, 327692, 3, 196608, 327693, 3, 196608, 327694, 3, 196608, 327695, 3, 196608, 327696, 1, 65537, 327697, 1, 131074, 327698, 3, 196608, 327699, 3, 196608, 327700, 3, 196608, 327701, 3, 196608, 327702, 1, 0, 327703, 1, 2, 393224, 3, 196608, 393225, 3, 196608, 393226, 3, 196608, 393227, 3, 196608, 393228, 3, 196608, 393229, 3, 196608, 393230, 3, 196608, 393231, 3, 196608, 393232, 1, 131073, 393233, 1, 1, 393234, 1, 1, 393235, 1, 1, 393236, 1, 1, 393237, 1, 1, 393238, 1, 1, 393239, 1, 65538, 458760, 3, 196608, 458761, 3, 196608, 458762, 3, 196608, 458763, 3, 196608, 458764, 3, 196608, 458765, 3, 196608, 458766, 3, 196608, 458767, 3, 196608, 458768, 3, 196608, 458769, 3, 196608, 458770, 3, 196608, 458771, 3, 196608, 458772, 3, 196608, 458774, 3, 196608, 458775, 3, 196608, 524296, 4, 2, 524297, 3, 196608, 524298, 3, 196608, 524299, 3, 196608, 524300, 3, 196608, 524301, 3, 196608, 524302, 3, 196608, 524303, 3, 196608, 524304, 3, 196608, 524305, 3, 196608, 524306, 3, 196608, 524307, 3, 196608, 524308, 3, 196608, 524310, 3, 196608, 524311, 3, 196608, 589832, 4, 65538, 589833, 3, 196608, 589834, 3, 196608, 589835, 3, 196608, 589836, 3, 196608, 589837, 3, 196608, 589838, 3, 196608, 589839, 3, 196608, 589840, 3, 196608, 589841, 3, 196608, 589842, 3, 196608, 589843, 3, 196608, 589844, 3, 196608, 589845, 3, 196608, 589846, 3, 196608, 589847, 3, 196608, 655368, 3, 196608, 655369, 3, 196608, 655370, 3, 196608, 655371, 3, 196608, 655372, 3, 196608, 655373, 3, 196608, 655374, 3, 196608, 655375, 3, 196608, 655376, 3, 196608, 655377, 3, 196608, 655378, 3, 196608, 655379, 3, 196608, 655381, 3, 196608, 655382, 3, 196608, 655383, 3, 196608, 720904, 3, 196608, 720905, 3, 196608, 720906, 3, 196608, 720907, 3, 196608, 720908, 3, 196608, 720909, 3, 196608, 720910, 3, 196608, 720911, 3, 196608, 720912, 3, 196608, 720913, 3, 196608, 720914, 3, 196608, 720915, 3, 196608, 720917, 4, 65537, 720918, 3, 196608, 720919, 3, 196608, 786440, 3, 196608, 786441, 3, 196608, 786442, 3, 196608, 786443, 3, 196608, 786444, 3, 196608, 786445, 3, 196608, 786446, 3, 196608, 786447, 3, 196608, 786448, 3, 196608, 786449, 3, 196608, 786450, 3, 196608, 786451, 3, 196608, 786452, 4, 65536, 786453, 1, 196609, 786454, 4, 1, 786455, 3, 196608, 851976, 3, 196608, 851977, 3, 196608, 851978, 3, 196608, 851979, 3, 196608, 851980, 3, 196608, 851981, 3, 196608, 851982, 3, 196608, 851983, 3, 196608, 851984, 3, 196608, 851985, 3, 196608, 851986, 3, 196608, 851987, 3, 196608, 851988, 3, 196608, 851989, 4, 0, 851990, 3, 196608, 851991, 3, 196608, 917512, 3, 196608, 917513, 3, 196608, 917514, 3, 196608, 917515, 3, 196608, 917516, 3, 196608, 917517, 3, 196608, 917518, 3, 196608, 917519, 3, 196608, 917520, 3, 196608, 917521, 3, 196608, 917522, 3, 196608, 917523, 3, 196608, 917524, 3, 196608, 917525, 3, 196608, 917526, 3, 196608, 917527, 3, 196608, 983048, 3, 196608, 983049, 3, 196608, 983050, 3, 196608, 983051, 3, 196608, 983052, 3, 196608, 983053, 3, 196608, 983055, 3, 196608, 983056, 3, 196608, 983057, 3, 196608, 983058, 3, 196608, 983059, 3, 196608, 983060, 3, 196608, 983061, 3, 196608, 983062, 3, 196608, 983063, 3, 196608, 1048590, 3, 65538 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 464, 533 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 29 )
+
+[node name="MapLimit" type="TileMap" parent="."]
+tile_set = SubResource( 31 )
+cell_size = Vector2( 32, 32 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( 262151, 0, 0, 262168, 0, 0, 327687, 0, 0, 327704, 0, 0, 393223, 0, 0, 393240, 0, 0, 458759, 0, 0, 458776, 0, 0, 524295, 0, 0, 524312, 0, 0, 589831, 0, 0, 589848, 0, 0, 655367, 0, 0, 655384, 0, 0, 720903, 0, 0, 720920, 0, 0, 786439, 0, 0, 786456, 0, 0, 851975, 0, 0, 851992, 0, 0, 917511, 0, 0, 917528, 0, 0, 983047, 0, 0, 983064, 0, 0, 1048583, 0, 0, 1048584, 0, 0, 1048585, 0, 0, 1048586, 0, 0, 1048587, 0, 0, 1048588, 0, 0, 1048589, 0, 0, 1048591, 0, 0, 1048592, 0, 0, 1048593, 0, 0, 1048594, 0, 0, 1048595, 0, 0, 1048596, 0, 0, 1048597, 0, 0, 1048598, 0, 0, 1048599, 0, 0, 1048600, 0, 0 )
+
+[node name="Estavan" type="Area2D" parent="."]
+position = Vector2( 636, 172 )
+scale = Vector2( 0.4, 0.4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Estavan"]
+position = Vector2( -30.0001, 110 )
+scale = Vector2( 2.52, 2.32 )
+z_index = 1
+shape = SubResource( 80 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Estavan"]
+frames = SubResource( 34 )
+animation = "idle"
+
+[node name="Gold" parent="." instance=ExtResource( 18 )]
+position = Vector2( 547, 323 )
+
+[connection signal="child_entered_tree" from="." to="." method="_on_StoreOne_child_entered_tree"]
+[connection signal="child_exiting_tree" from="." to="." method="_on_StoreOne_child_exiting_tree"]
+[connection signal="timeout" from="KinematicBody2D/HealthLife" to="KinematicBody2D" method="_on_HealthLife_timeout"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_Area2D_body_shape_entered"]
+[connection signal="body_shape_entered" from="Estavan" to="." method="_on_Estavan_body_shape_entered"]
+[connection signal="body_shape_exited" from="Estavan" to="." method="_on_Estavan_body_shape_exited"]

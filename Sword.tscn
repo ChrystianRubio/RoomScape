@@ -12,7 +12,7 @@ normal = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2( -8, -8 )
+position = Vector2( -9, -9 )
 scale = Vector2( 1.28, 1.32 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

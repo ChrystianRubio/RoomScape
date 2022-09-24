@@ -8,13 +8,22 @@ extends Control
 #obtendo um objeto do tipo savegame para acessar o banco de dados
 var manipulation_acess_dd = SaveGame.new()
 var mani
+var quantify_gold = 0 
+
+
 var flag_instance_sword = false
 var flag_instance_wood_shield = false
 var flag_instance_meet = false
+var flag_instance_gold = false
+var flag_instance_iron_sword = false
 var flag_correct_position = false
+
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#equipar ou jogar fora
 	$optionsLayout/ItemOptions.set_item_icon(0, $ItemsTexture/EquipOptions.texture)
 	$optionsLayout/ItemOptions.set_item_icon(1, $ItemsTexture/OutOptions.texture)
 
@@ -28,7 +37,7 @@ func _process(delta):
 	#mostrando em layout equip nossos equipamentos de cada parte do corpo
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null:
 		$optionsLayout/ItemListEquip.set_item_text(2, 
-											str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["name"] +
+											str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["name"] + " " +
 											str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["damage"])
 											))
 	else:
@@ -37,7 +46,7 @@ func _process(delta):
 
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["shield"] != null:
 		$optionsLayout/ItemListEquip.set_item_text(3, 
-											str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["name"] +
+											str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["name"] + " " +
 											str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["defense"])
 											))
 	else:
@@ -49,10 +58,57 @@ func _process(delta):
 	$optionsLayout/ItemListSkills.set_item_text(0, "Fight: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[0]['fight']))
 	$optionsLayout/ItemListSkills.set_item_text(1, "Defense: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[1]['defense']))
 	
-	
+	#comprando na loja
+	for slot_store in range(0, 3):
+		if $optionsLayout/ItemListStore.is_selected(slot_store):
+			#vou deseleciona logo em seguida pra nao permanecer comprando
+			$optionsLayout/ItemListStore.unselect(slot_store)
+			mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
+
+			var flag_buy = false
+			var flag_slot = false
+			#a loja é de forma statica
+			for slot_bag in range(0, 7):
+				if str(mani[slot_bag]) != str(manipulation_acess_dd.default_value_bag[slot_bag]):
+					if mani[slot_bag]["gold"] > 0: # se tiver gold(se for igual a zero pq comprar o shield e sword default
+							for x in range(0, 7): 
+								if str(mani[x]) == str(manipulation_acess_dd.default_value_bag[x]): # se tiver slot vazio na bag
+									flag_buy = true
+									break
+							if flag_buy: # cobrando
+								if mani[slot_bag]["gold"] >= int($optionsLayout/ItemListStore.get_item_text(slot_store)):
+									mani[slot_bag]["gold"] -= int($optionsLayout/ItemListStore.get_item_text(slot_store))
+									flag_slot =true
+									print(int($optionsLayout/ItemListStore.get_item_text(slot_store)))
+							break
+
+			if flag_buy and flag_slot:
+				for slot_bag in range(0, 7):
+						if str(mani[slot_bag]) == str(manipulation_acess_dd.default_value_bag[slot_bag]):
+
+							if slot_store == 0:
+								mani[slot_bag] = {"name" : "Sword5", "damage": 1, "defense": 0, "health": 0, "gold": 0, "weapon": true, "shield": false, "food": false}
+
+							elif slot_store == 1:
+								mani[slot_bag] = {"name" : "WoodShield", "damage": 0, "defense": 1,"health": 0,"gold": 0, "weapon": false, "shield": true, "food": false}
+							
+							elif slot_store == 2:
+								mani[slot_bag] = {"name" : "iron_sword", "damage": 3, "defense": 0, "health": 0, "gold": 0, "weapon": true, "shield": false, "food": false}
+							flag_buy = false
+							break
+
+			manipulation_acess_dd.set_save(manipulation_acess_dd.path_bag, mani)
+
+
 	for slot_bag in range(0, 7):
 
 		#condicao para aparecer na layout da bag, se caso existir na bag bd
+		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "iron_sword":
+			$optionsLayout/ItemListBag.set_item_icon(slot_bag, $ItemsTexture/iron_sword.texture ) 
+		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "gold":
+			$optionsLayout/ItemListBag.set_item_icon(slot_bag, $ItemsTexture/gold.texture ) 
+			$optionsLayout/ItemListBag.set_item_text(slot_bag, str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["gold"]))
+			quantify_gold = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["gold"] # para  dropar todos
 		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "meet":
 			$optionsLayout/ItemListBag.set_item_icon(slot_bag, $ItemsTexture/meet.texture ) 
 		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "Sword5":
@@ -148,6 +204,13 @@ func _process(delta):
 						flag_instance_wood_shield = true
 					elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"] == "meet":
 						flag_instance_meet = true
+						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
+					elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"] == "gold":
+						$optionsLayout/ItemListBag.set_item_text(slot_bag, "")
+						flag_instance_gold = true
+						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
+					elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"] == "iron_sword":
+						flag_instance_iron_sword = true
 						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
 			
 					# apos jogar no chao, deletar da bag

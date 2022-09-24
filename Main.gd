@@ -3,16 +3,13 @@ extends Node2D
 
 # Declare member variables here. 
 
+#obtendo um objeto do tipo savegame para acessar o banco de dados
+var manipulation_acess_dd = SaveGame.new()
+var mani
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$itemsButtonScreen/Sword.position.x = 0
-	$itemsButtonScreen/Sword.position.y = 0
-	$itemsButtonScreen/Sword.visible = true
-	$itemsButtonScreen/WoodShield.position.x = 50
-	$itemsButtonScreen/WoodShield.position.y = -50
-	$itemsButtonScreen/WoodShield.visible = true
 	pass # Replace with function body.
 
 
@@ -31,6 +28,17 @@ func _process(delta):
 	if $KinematicBody2D/Layout.flag_instance_meet:
 		add_child(preload("res://Meet.tscn").instance())
 		$KinematicBody2D/Layout.flag_instance_meet = false
+	
+	if $KinematicBody2D/Layout.flag_instance_iron_sword:
+		add_child(preload("res://IronSword.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_iron_sword = false
+	
+	if $KinematicBody2D/Layout.flag_instance_gold:
+		#esse for é para jogar todos as moedas no chao
+		for quantify in range(0, $KinematicBody2D/Layout.quantify_gold):
+			add_child(preload("res://Gold.tscn").instance())
+			$KinematicBody2D/Layout.flag_instance_gold = false
+			$KinematicBody2D/Layout.quantify_gold = 0
 #	pass
 
 
@@ -74,7 +82,7 @@ func _on_Main_child_exiting_tree(node):
 			limit_bug -= 1
 
 
-		#quando um animal morrer, meet aparece no mesmo lugar x e y
+		#quando um algo do tipo animals morrer, meet aparece no mesmo lugar x e y
 		position_node_x = node.position.x
 		position_node_y = node.position.y
 		add_child(preload("res://Meet.tscn").instance())
@@ -101,7 +109,21 @@ func _on_Main_child_entered_tree(node):
 			node.position.y = $KinematicBody2D.position.y
 			node.scale.x = 0.3
 			node.scale.y = 0.3
+		if node.is_in_group("iron_sword"):
+			node.scale.x = 0.7
+			node.scale.y = 0.7
+			#necessario para posicao correta na hora de jogar fora
+			if $KinematicBody2D/Layout.flag_correct_position:
+				node.position.x = $KinematicBody2D.position.x
+				node.position.y = $KinematicBody2D.position.y
+				$KinematicBody2D/Layout.flag_correct_position = false
 		elif node.is_in_group("wood_shield"):
+			node.position.x = $KinematicBody2D.position.x
+			node.position.y = $KinematicBody2D.position.y
+			node.scale.x = 1
+			node.scale.y = 1
+		elif node.is_in_group("gold"):
+
 			node.position.x = $KinematicBody2D.position.x
 			node.position.y = $KinematicBody2D.position.y
 			node.scale.x = 1
@@ -125,4 +147,11 @@ func _on_ColiisonCaveOne_body_shape_entered(body_rid, body, body_shape_index, lo
 	if body:
 		if body.name == "KinematicBody2D":
 			get_tree().change_scene("res://CaveOne.tscn")
+	pass # Replace with function body.
+
+
+func _on_ColliionStoreOne_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	if body:
+		if body.name == "KinematicBody2D":
+			get_tree().change_scene("res://StoreOne.tscn")
 	pass # Replace with function body.
