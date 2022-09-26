@@ -6,7 +6,7 @@ extends KinematicBody2D
 
 #obtendo um objeto do tipo savegame para acessar o banco de dados
 var manipulation_acess_dd = SaveGame.new()
-
+var mani
 # Called when the node enters the scene tree for the first time.
 #func _ready():
 #	pass # Replace with function body.
@@ -72,14 +72,24 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
+	#pegando posicao x  e y toda hora pq o android ao reconehce o exited corretamente(se for sair do jogo)
+	mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
+	mani[2]["main"]["positionX"] = position.x 
+	mani[2]["main"]["positionY"] = position.y 
+	manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
+	
 	#morte do pesonagem
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"] <= 0:
 		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, manipulation_acess_dd.default_value_status)
 		get_tree().change_scene("res://Death_City.tscn")
-	
+
+
+
 	#mostrando um  progress bar com a vida do personagem
 	$TextureProgress.value =  manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[0]["life"]
 	$TextureProgress.max_value = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")[1]["max_life"]
+	
+
 #	pass
 
 

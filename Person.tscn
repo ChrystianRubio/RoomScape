@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://assets/Characters/_side attack.png" type="Texture" id=1]
 [ext_resource path="res://assets/Characters/_up attack.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://assets/Characters/_down idle.png" type="Texture" id=11]
 [ext_resource path="res://Layout.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/Characters/lifebarGreen.png" type="Texture" id=13]
+[ext_resource path="res://Person.gd" type="Script" id=14]
 
 [sub_resource type="CapsuleShape2D" id=49]
 height = 22.0
@@ -277,6 +278,7 @@ animations = [ {
 
 [node name="Person" type="Node2D"]
 position = Vector2( 350, 264 )
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_group_": true
 }

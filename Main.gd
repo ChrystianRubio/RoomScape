@@ -33,6 +33,14 @@ func _process(delta):
 		add_child(preload("res://IronSword.tscn").instance())
 		$KinematicBody2D/Layout.flag_instance_iron_sword = false
 	
+	if $KinematicBody2D/Layout.flag_instance_reforced_wood_shield:
+		add_child(preload("res://ReforcedWoodShield.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_reforced_wood_shield = false
+	
+	if $KinematicBody2D/Layout.flag_instance_simple_axe:
+		add_child(preload("res://SimpleAxe.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_simple_axe = false
+	
 	if $KinematicBody2D/Layout.flag_instance_gold:
 		#esse for é para jogar todos as moedas no chao
 		for quantify in range(0, $KinematicBody2D/Layout.quantify_gold):
@@ -46,6 +54,7 @@ func _process(delta):
 var limit_scorpion = 1
 var limit_ant = 1
 var limit_bug = 1
+var limit_simple_tree = 1
 
 func _on_TimerScorpion_timeout():
 	if limit_scorpion <= 5:
@@ -66,10 +75,28 @@ func _on_TimerBug_timeout():
 		limit_bug += 1
 	pass # Replace with function body.
 
-#quando um scorpion morrer ele nos entrga seu x e y para o meet e outros objetos
+
+func _on_TimerSimpleTree_timeout():
+	if limit_simple_tree <= 5:
+		add_child(preload("res://SimpleTree.tscn").instance())
+		limit_simple_tree += 1
+	pass # Replace with function body.
+
+
+#quando um algo morrer ele nos entrga seu x e y para o meet e outros objetos
 var position_node_x = 0
 var position_node_y = 0
 func _on_Main_child_exiting_tree(node):
+
+	#pegando a posicao x e y do personagem
+	if node.name == "KinematicBody2D":
+		mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
+		mani[2]["main"]["positionX"] = $KinematicBody2D.position.x 
+		mani[2]["main"]["positionY"] = $KinematicBody2D.position.y 
+		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
+	if node.is_in_group("tree"):
+		if node.is_in_group("simple_tree"):
+			limit_simple_tree -= 1
 
 	if node.is_in_group("animals"):
 		if node.is_in_group("Scorpion"):
@@ -81,19 +108,18 @@ func _on_Main_child_exiting_tree(node):
 		if node.is_in_group("bug"):
 			limit_bug -= 1
 
-
 		#quando um algo do tipo animals morrer, meet aparece no mesmo lugar x e y
 		position_node_x = node.position.x
 		position_node_y = node.position.y
 		add_child(preload("res://Meet.tscn").instance())
 
-		#parar animacao do personagem quando o scorpion morrer
-		if $KinematicBody2D/AnimatedSprite.animation == "up_attack":
-			$KinematicBody2D/AnimatedSprite.play("up_idle")
-		elif $KinematicBody2D/AnimatedSprite.animation == "down_attack":
-			$KinematicBody2D/AnimatedSprite.play("down_idle")
-		elif $KinematicBody2D/AnimatedSprite.animation == "side_attack":
-			$KinematicBody2D/AnimatedSprite.play("side_idle")
+	#parar animacao do personagem algo morrer
+	if $KinematicBody2D/AnimatedSprite.animation == "up_attack":
+		$KinematicBody2D/AnimatedSprite.play("up_idle")
+	elif $KinematicBody2D/AnimatedSprite.animation == "down_attack":
+		$KinematicBody2D/AnimatedSprite.play("down_idle")
+	elif $KinematicBody2D/AnimatedSprite.animation == "side_attack":
+		$KinematicBody2D/AnimatedSprite.play("side_idle")
 
 	pass # Replace with function body.
 
@@ -101,6 +127,17 @@ func _on_Main_child_exiting_tree(node):
 
 
 func _on_Main_child_entered_tree(node):
+	#definindo onde o personagem esta para futuras seções
+	if node.name == "KinematicBody2D":
+		mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
+		mani[2]["main"]["current"] = true
+		mani[2]["cave_one"]["current"] = false
+		mani[2]["store_one"]["current"] = false
+		mani[2]["death_city"]["current"] = false
+		$KinematicBody2D.position.x = mani[2]["main"]["positionX"]
+		$KinematicBody2D.position.y = mani[2]["main"]["positionY"]
+		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
+
 	if node.is_in_group("item"):
 		#necessario mais de um grupo pois as sprites sao de tamanhos diferetentes e precisam
 		# de scale diferentes
@@ -117,7 +154,23 @@ func _on_Main_child_entered_tree(node):
 				node.position.x = $KinematicBody2D.position.x
 				node.position.y = $KinematicBody2D.position.y
 				$KinematicBody2D/Layout.flag_correct_position = false
+		if node.is_in_group("axe"):
+			node.scale.x = 1
+			node.scale.y = 1
+			#necessario para posicao correta na hora de jogar fora
+			if $KinematicBody2D/Layout.flag_correct_position:
+				node.position.x = $KinematicBody2D.position.x
+				node.position.y = $KinematicBody2D.position.y
+				$KinematicBody2D/Layout.flag_correct_position = false
+			else:
+				node.position.x = position_node_x
+				node.position.y = position_node_y
 		elif node.is_in_group("wood_shield"):
+			node.position.x = $KinematicBody2D.position.x
+			node.position.y = $KinematicBody2D.position.y
+			node.scale.x = 1
+			node.scale.y = 1
+		elif node.is_in_group("reforced_wood_shield"):
 			node.position.x = $KinematicBody2D.position.x
 			node.position.y = $KinematicBody2D.position.y
 			node.scale.x = 1
@@ -155,3 +208,4 @@ func _on_ColliionStoreOne_body_shape_entered(body_rid, body, body_shape_index, l
 		if body.name == "KinematicBody2D":
 			get_tree().change_scene("res://StoreOne.tscn")
 	pass # Replace with function body.
+

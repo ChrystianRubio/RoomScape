@@ -3,11 +3,11 @@ extends Node
 class_name SaveGame
 
 # O caminho dos saves 
-var path_game_events = "user://game_events18.save"
-var path_bag = "user://character_bag82.save"
-var path_skills = "user://character_skills24save"
-var path_equip = "user://character_equip121.save"
-var path_status_character = "user://character_status30.save"
+var path_game_events = "user://game_events31.save"
+var path_bag = "user://character_bag90.save"
+var path_skills = "user://character_skills37.save"
+var path_equip = "user://character_equip130.save"
+var path_status_character = "user://character_status50.save"
 
 
 
@@ -28,6 +28,13 @@ var default_value_game_events = {
 	"lost_bag": "you lost everything in your bag",
 	"full": "you are full",
 	"ate the food": "you ate the food",
+	"no_money": "you don't have enough money",
+	"buy_iron_sword": "you bought an iron sword",
+	"buy_reforced_wood_shield": "you bought a reforced wood shield",
+	"buy_simple_axe": "you bought a simple axe",
+	"level_up_fight": "you advanced your fighting level to ",
+	"level_up_woodcutting": "you advanced your woodcutting level to ",
+	
 }
 
 var value_game_events_manipulation = acess_save(path_game_events, default_value_game_events)
@@ -45,8 +52,10 @@ func setValue_game_events_manipulation(var value_game_events_manipulation):
 # skills
 
 var default_value_skills = {
-	0: {"fight": 0},
-	1: {"defense": 0},
+	0: {"fight": {"xp_current": 0, "level_current": 1},
+	   },
+	1: {"woodcutting": {"xp_current": 0, "level_current": 1},
+	   },
 }
 
 var value_skills_manipulation = acess_save(path_skills, default_value_skills)
@@ -114,6 +123,12 @@ func setEquip_manipulation(var equip_manipulation):
 var default_value_status = {
 	0: {"life": 10},
 	1: {"max_life": 10},
+	2: {
+		"main":       {"positionX": -707, "positionY": -243, "current": true},
+		"cave_one":   {"positionX": 50, "positionY": 50, "current": false},
+		"store_one": {"positionX": 50, "positionY": 50, "current": false},
+		"death_city": {"positionX": 50, "positionY": 50, "current": false},
+	},
 }
 
 var status_manipulation = acess_save(path_status_character, default_value_status)

@@ -16,6 +16,8 @@ var flag_instance_wood_shield = false
 var flag_instance_meet = false
 var flag_instance_gold = false
 var flag_instance_iron_sword = false
+var flag_instance_reforced_wood_shield = false
+var flag_instance_simple_axe  = false
 var flag_correct_position = false
 
 
@@ -36,27 +38,35 @@ func _process(delta):
 	
 	#mostrando em layout equip nossos equipamentos de cada parte do corpo
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null:
-		$optionsLayout/ItemListEquip.set_item_text(2, 
-											str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["name"] + " " +
-											str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["damage"])
-											))
+		$optionsLayout/ItemListEquip.set_item_text(2, str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["damage"]))
+		if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["name"] == "Sword5":
+			$optionsLayout/ItemListEquip.set_item_icon(2, $ItemsTexture/sword1.texture)
+		elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["name"] == "iron_sword":
+			$optionsLayout/ItemListEquip.set_item_icon(2, $ItemsTexture/iron_sword.texture)
+		elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["name"] == "simple_axe":
+			$optionsLayout/ItemListEquip.set_item_icon(2, $ItemsTexture/simple_axe.texture)
 	else:
 		$optionsLayout/ItemListEquip.set_item_text(2,"")
+		$optionsLayout/ItemListEquip.set_item_icon(2, null)
 
 
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["shield"] != null:
-		$optionsLayout/ItemListEquip.set_item_text(3, 
-											str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["name"] + " " +
-											str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["defense"])
-											))
+		$optionsLayout/ItemListEquip.set_item_text(3, str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["defense"]))
+		if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["name"] ==  "WoodShield":
+			$optionsLayout/ItemListEquip.set_item_icon(3, $ItemsTexture/wood_shield.texture)
+		elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[3]["name"] ==  "reforced_wood_shield":
+			$optionsLayout/ItemListEquip.set_item_icon(3, $ItemsTexture/reforced_wood_shield.texture)
 	else:
 		$optionsLayout/ItemListEquip.set_item_text(3,"")
+		$optionsLayout/ItemListEquip.set_item_icon(3, null)
 
 
 	
 	#colocando as skiils corretas no layout skills
-	$optionsLayout/ItemListSkills.set_item_text(0, "Fight: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[0]['fight']))
-	$optionsLayout/ItemListSkills.set_item_text(1, "Defense: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[1]['defense']))
+	set_level(0, "fight", "level_up_fight")
+	set_level(1, "woodcutting", "level_up_woodcutting")
+	$optionsLayout/ItemListSkills.set_item_text(0, "Fight: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[0]['fight']["level_current"]))
+	$optionsLayout/ItemListSkills.set_item_text(1, "woodcutting: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[1]['woodcutting']["level_current"]))
 	
 	#comprando na loja
 	for slot_store in range(0, 3):
@@ -70,16 +80,20 @@ func _process(delta):
 			#a loja é de forma statica
 			for slot_bag in range(0, 7):
 				if str(mani[slot_bag]) != str(manipulation_acess_dd.default_value_bag[slot_bag]):
-					if mani[slot_bag]["gold"] > 0: # se tiver gold(se for igual a zero pq comprar o shield e sword default
+					if mani[slot_bag]["name"] == "gold": # se tiver gold
 							for x in range(0, 7): 
 								if str(mani[x]) == str(manipulation_acess_dd.default_value_bag[x]): # se tiver slot vazio na bag
 									flag_buy = true
 									break
+								if x >= 6:
+									$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["no_empty_slots"] + "\n"
 							if flag_buy: # cobrando
 								if mani[slot_bag]["gold"] >= int($optionsLayout/ItemListStore.get_item_text(slot_store)):
 									mani[slot_bag]["gold"] -= int($optionsLayout/ItemListStore.get_item_text(slot_store))
-									flag_slot =true
-									print(int($optionsLayout/ItemListStore.get_item_text(slot_store)))
+									flag_slot = true
+								else:
+									$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["no_money"] + "\n"
+
 							break
 
 			if flag_buy and flag_slot:
@@ -87,13 +101,16 @@ func _process(delta):
 						if str(mani[slot_bag]) == str(manipulation_acess_dd.default_value_bag[slot_bag]):
 
 							if slot_store == 0:
-								mani[slot_bag] = {"name" : "Sword5", "damage": 1, "defense": 0, "health": 0, "gold": 0, "weapon": true, "shield": false, "food": false}
+								mani[slot_bag] = {"name" : "iron_sword", "damage": 3, "defense": 0, "health": 0, "gold": 0,"wood": false , "weapon": true, "shield": false, "food": false}
+								$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_iron_sword"] + "\n"
 
 							elif slot_store == 1:
-								mani[slot_bag] = {"name" : "WoodShield", "damage": 0, "defense": 1,"health": 0,"gold": 0, "weapon": false, "shield": true, "food": false}
-							
+								mani[slot_bag] = {"name" : "reforced_wood_shield", "damage": 0, "defense": 3, "health": 0, "gold": 0,"wood": false , "weapon": false, "shield": true, "food": false}
+								$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_reforced_wood_shield"] + "\n"
+
 							elif slot_store == 2:
-								mani[slot_bag] = {"name" : "iron_sword", "damage": 3, "defense": 0, "health": 0, "gold": 0, "weapon": true, "shield": false, "food": false}
+								mani[slot_bag] =  {"name" : "simple_axe", "damage": 1, "defense": 0, "health": 0, "gold": 0,"wood": true , "weapon": true, "shield": false, "food": false}
+								$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_reforced_wood_shield"] + "\n"
 							flag_buy = false
 							break
 
@@ -103,6 +120,10 @@ func _process(delta):
 	for slot_bag in range(0, 7):
 
 		#condicao para aparecer na layout da bag, se caso existir na bag bd
+		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "simple_axe":
+			$optionsLayout/ItemListBag.set_item_icon(slot_bag, $ItemsTexture/simple_axe.texture ) 
+		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "reforced_wood_shield":
+			$optionsLayout/ItemListBag.set_item_icon(slot_bag, $ItemsTexture/reforced_wood_shield.texture ) 
 		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "iron_sword":
 			$optionsLayout/ItemListBag.set_item_icon(slot_bag, $ItemsTexture/iron_sword.texture ) 
 		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "gold":
@@ -207,10 +228,18 @@ func _process(delta):
 						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
 					elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"] == "gold":
 						$optionsLayout/ItemListBag.set_item_text(slot_bag, "")
-						flag_instance_gold = true
-						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
+						# o mundo que estiver so vai instanciar outra se gold for maior que zero
+						if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["gold"] > 0:
+							flag_instance_gold = true
+							flag_correct_position = true #necessario para posicao correta na hora de jogar fora
 					elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"] == "iron_sword":
 						flag_instance_iron_sword = true
+						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
+					elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"] == "reforced_wood_shield":
+						flag_instance_reforced_wood_shield = true
+						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
+					elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"] == "simple_axe":
+						flag_instance_simple_axe = true
 						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
 			
 					# apos jogar no chao, deletar da bag
@@ -226,6 +255,9 @@ func _process(delta):
 				#deselesionando tudo do options
 				$optionsLayout/ItemOptions.unselect_all()
 
+			else: # se caso selecionar algo vazio
+				$optionsLayout/ItemOptions.visible = false
+				$optionsLayout/ItemListBag.unselect_all()
 
 		#5 pq so temos 5 espacos na equip
 		if slot_bag < 5:
@@ -283,6 +315,37 @@ func _process(delta):
 			mani[0]["life"] = mani[1]["max_life"]
 		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
 
+
+#setando o level do personagem com base no xp_current
+func set_level(var location, var skill, var level_up_msg):
+	mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")
+	#var flag_level_up = false
+	if mani[location][skill]["xp_current"] < 100:
+		mani[location][skill]["level_current"] = 1
+	elif mani[location][skill]["xp_current"] >= 100 and mani[location][skill]["xp_current"] < 200 :
+		mani[location][skill]["level_current"] = 2
+	elif mani[location][skill]["xp_current"] >= 200 and mani[location][skill]["xp_current"] < 400 :
+		mani[location][skill]["level_current"] = 3
+	elif mani[location][skill]["xp_current"] >= 400 and mani[location][skill]["xp_current"] < 800 :
+		mani[location][skill]["level_current"] = 4
+	elif mani[location][skill]["xp_current"] >= 800 and mani[location][skill]["xp_current"] < 1500 :
+		mani[location][skill]["level_current"] = 5
+	elif mani[location][skill]["xp_current"] >= 1500 and mani[location][skill]["xp_current"] < 2600 :
+		mani[location][skill]["level_current"] = 6
+	elif mani[location][skill]["xp_current"] >= 2600 and mani[location][skill]["xp_current"] < 4200 :
+		mani[location][skill]["level_current"] = 7
+	elif mani[location][skill]["xp_current"] >= 4200 and mani[location][skill]["xp_current"] < 6400 :
+		mani[location][skill]["level_current"] = 8
+	elif mani[location][skill]["xp_current"] >= 6400 and mani[location][skill]["xp_current"] < 9300 :
+		mani[location][skill]["level_current"] = 9
+	elif mani[location][skill]["xp_current"] >= 9300: #and mani[location][skill]["xp_current"] < 6400 :
+		mani[location][skill]["level_current"] = 10
+
+	#aparecendo uma mensagem de level up no log
+	if mani[location][skill]["level_current"] > manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[location][skill]["level_current"]:
+		$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events[level_up_msg] + str(mani[location][skill]["level_current"]) + "\n"
+
+	manipulation_acess_dd.set_save(manipulation_acess_dd.path_skills, mani)
 
 # botao config presionado
 func _on_ButtonConfig_pressed():

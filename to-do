@@ -1,7 +1,7 @@
 
 padrao:
 	dicionario dos itens:
-			{"name" : "Sword5", "damage": 1, "defense": 0, "health": 0, "weapon": true, "shield": false, "food": false}
+			{"name" : "Sword5", "damage": 1, "defense": 0, "health": 0, "wood": false ,"weapon": true, "shield": false, "food": false}
 
 nova cena:
 	desenha
@@ -53,21 +53,24 @@ Passo a passo:
 		coloque esse novo objeto screen em itemsTexture(instance)
 		
 		criar no Layout.gd a flag de instancia e a flag de posicao correta no começo do script
+		no Layout.gd na area de aparece no equip o icone
 		no Layout.gd na area de aparecer na bag o icone
 		coloque para aparecer na bag o objeto
 		
 		em Layout.gd coloque no lugar onde é pra jogar fora/chao
+		em Main.gd(e outras cidades) coloque a instancia no process(de cada cidade que tiver ativo o drop de coisas)
 		em Main.gd(e outros cidades) coloque os grupos corretos e onde vao aparecer(pega posica x e y correta)
-		coloque a instancia no process(de cada cidade que tiver ativo o drop de coisas)
+		
 		
 		nas cidades onde as criaturas morrem, colocar o objeto que vao dropar
 		
 		se for da loja coloque na loja no itens
 		vai em layout.gd e coloque a opcao valendo la
 		troque o limite da loja pq voce aumentou mais um item la
+		apos isso coloque o log tbm
 
-BUD NA COMPRAAAAA
-BUG DE VALORES PELOS ITEMS GRATIS
+
+
 
 	item Consumivel:
 		sera um ScreenButton com area2d e collison shape(pode colocar grupos tbm)
@@ -100,7 +103,7 @@ BUG DE VALORES PELOS ITEMS GRATIS
 		
 	Monstro:
 		kinematicBody, animated, collisin, touch, timer(fight), textureProgress, area2d(lutar de perto) -> Collision da area
-		mude o z index para 1
+		mude o z index para -2
 		mexa no scale se necessario
 		coloque os grupos corretos
 		coloque um script

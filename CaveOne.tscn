@@ -699,7 +699,7 @@ shape = SubResource( 49 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 position = Vector2( -7, 6 )
 frames = SubResource( 78 )
-animation = "up_idle"
+animation = "down_idle"
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 position = Vector2( 158, 43 )

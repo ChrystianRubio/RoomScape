@@ -8,6 +8,7 @@ var manipulation_acess_dd = SaveGame.new()
 
 var attack = 0.5
 var life = 2
+var xp = 5
 var flagNear = false #uma flag para conseguir somente atacar quando estiver perto
 
 
@@ -56,19 +57,18 @@ func _on_Timer_timeout():
 	# entregando dano 
 	if manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["weapon"] != null and flagNear:
 		life -= int(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_equip, "")[2]["damage"])
-		maniSkills[0]["fight"] += 0.1
-		maniSkills[1]["defense"] += 0.1
 		mani[0]["life"] -=  attack # recebendo o ataque do ant
+
+	#morte 
+	if life <= 0:
+		maniSkills[0]["fight"]["xp_current"] += xp
+		#$Timer.stop()
+		queue_free()
+
 
 	#atualizando o status do personagem
 	manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani) 
 	manipulation_acess_dd.set_save(manipulation_acess_dd.path_skills, maniSkills)
-
-	#morte 
-	if life <= 0:
-		#$Timer.stop()
-		queue_free()
-
 	pass # Replace with function body.
 
 

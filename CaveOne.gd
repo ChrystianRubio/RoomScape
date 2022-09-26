@@ -2,7 +2,9 @@ extends Node2D
 
 
 # Declare member variables here. Examples:
-
+#obtendo um objeto do tipo savegame para acessar o banco de dados
+var manipulation_acess_dd = SaveGame.new()
+var mani
 
 
 # Called when the node enters the scene tree for the first time.
@@ -24,6 +26,15 @@ func _process(delta):
 	if $KinematicBody2D/Layout.flag_instance_meet:
 		add_child(preload("res://Meet.tscn").instance())
 		$KinematicBody2D/Layout.flag_instance_meet = false
+	
+	
+	if $KinematicBody2D/Layout.flag_instance_reforced_wood_shield:
+		add_child(preload("res://ReforcedWoodShield.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_reforced_wood_shield = false
+	
+	if $KinematicBody2D/Layout.flag_instance_simple_axe:
+		add_child(preload("res://SimpleAxe.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_simple_axe = false
 	
 	#item agrupavel
 	if $KinematicBody2D/Layout.flag_instance_gold:
@@ -58,6 +69,14 @@ var position_node_x = 0
 var position_node_y = 0
 
 func _on_CaveOne_child_entered_tree(node):
+	#definindo onde o personagem esta para futuras seções
+	if node.name == "KinematicBody2D":
+		mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
+		mani[2]["main"]["current"] = false
+		mani[2]["cave_one"]["current"] = true
+		mani[2]["store_one"]["current"] = false
+		mani[2]["death_city"]["current"] = false
+		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
 	if node.is_in_group("item"):
 		#necessario mais de um grupo pois as sprites sao de tamanhos diferetentes e precisam
 		# de scale diferentes
@@ -77,7 +96,23 @@ func _on_CaveOne_child_entered_tree(node):
 			else:
 				node.position.x = position_node_x
 				node.position.y = position_node_y
+		if node.is_in_group("axe"):
+			node.scale.x = 1
+			node.scale.y = 1
+			#necessario para posicao correta na hora de jogar fora
+			if $KinematicBody2D/Layout.flag_correct_position:
+				node.position.x = $KinematicBody2D.position.x
+				node.position.y = $KinematicBody2D.position.y
+				$KinematicBody2D/Layout.flag_correct_position = false
+			else:
+				node.position.x = position_node_x
+				node.position.y = position_node_y
 		elif node.is_in_group("wood_shield"):
+			node.position.x = $KinematicBody2D.position.x
+			node.position.y = $KinematicBody2D.position.y
+			node.scale.x = 1
+			node.scale.y = 1
+		elif node.is_in_group("reforced_wood_shield"):
 			node.position.x = $KinematicBody2D.position.x
 			node.position.y = $KinematicBody2D.position.y
 			node.scale.x = 1
@@ -89,7 +124,7 @@ func _on_CaveOne_child_entered_tree(node):
 			if $KinematicBody2D/Layout.flag_correct_position:
 				node.position.x = $KinematicBody2D.position.x
 				node.position.y = $KinematicBody2D.position.y
-				$KinematicBody2D/Layout.flag_correct_position = false
+				#$KinematicBody2D/Layout.flag_correct_position = false
 			else:
 				node.position.x = position_node_x
 				node.position.y = position_node_y
@@ -110,13 +145,22 @@ func _on_CaveOne_child_entered_tree(node):
 
 
 func _on_CaveOne_child_exiting_tree(node):
+	if node.name == "KinematicBody2D":
+		mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_status_character, "")
+		#saindo de store seta o x e y da main, para nao travar no colission da porta que esta antes
+		mani[2]["main"]["positionX"] = -2766
+		mani[2]["main"]["positionY"] = -512
+		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
+
+
 	if node.is_in_group("monster"):
 		if node.is_in_group("devourer"):
 			limit_devourer -= 1
 
-		#quando um algo do tipo monster morrer, gold aparece no mesmo lugar x e y
+		#quando algo do tipo monster morrer, gold aparece no mesmo lugar x e y
 		position_node_x = node.position.x
 		position_node_y = node.position.y
+		$KinematicBody2D/Layout.flag_correct_position = false #necessario para ir para a posicao correta do bixo
 		add_child(preload("res://Gold.tscn").instance())
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/skills.png" type="Texture" id=1]
 [ext_resource path="res://assets/equips.png" type="Texture" id=2]
@@ -9,17 +9,12 @@
 [ext_resource path="res://assets/1577_0.png" type="Texture" id=7]
 [ext_resource path="res://assets/774_0.png" type="Texture" id=8]
 [ext_resource path="res://assets/transparentDark07.png" type="Texture" id=9]
-[ext_resource path="res://assets/defense.png" type="Texture" id=10]
-[ext_resource path="res://assets/sword_02b.png" type="Texture" id=11]
-[ext_resource path="res://assets/shield_02d.png" type="Texture" id=12]
+[ext_resource path="res://assets/214_0.png" type="Texture" id=10]
+[ext_resource path="res://assets/simple_axe.png" type="Texture" id=11]
 [ext_resource path="res://ItemsTexture.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/helmet_01a.png" type="Texture" id=14]
-[ext_resource path="res://assets/boots_01a.png" type="Texture" id=15]
-[ext_resource path="res://assets/armor_01a.png" type="Texture" id=16]
 [ext_resource path="res://assets/1717_0.png" type="Texture" id=17]
 [ext_resource path="res://assets/1042_1.png" type="Texture" id=18]
-[ext_resource path="res://assets/435_0.png" type="Texture" id=19]
-[ext_resource path="res://assets/woodShield.png" type="Texture" id=20]
+[ext_resource path="res://assets/shield_01a.png" type="Texture" id=19]
 [ext_resource path="res://assets/sword_01c.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=4]
@@ -122,8 +117,10 @@ margin_right = 114.0
 margin_bottom = 147.5
 rect_scale = Vector2( 0.3, 0.316 )
 focus_mode = 0
-items = [ "Attack", ExtResource( 8 ), false, "Defense", ExtResource( 10 ), false ]
+items = [ "", ExtResource( 8 ), false, "", ExtResource( 10 ), false ]
 allow_reselect = true
+same_column_width = true
+icon_mode = 0
 
 [node name="ItemListBag" type="ItemList" parent="optionsLayout"]
 visible = false
@@ -150,7 +147,7 @@ margin_right = 134.0
 margin_bottom = 175.0
 rect_scale = Vector2( 0.3, 0.316 )
 focus_mode = 0
-items = [ "", ExtResource( 14 ), false, "", ExtResource( 16 ), false, "", ExtResource( 11 ), false, "", ExtResource( 12 ), false, "", ExtResource( 15 ), false ]
+items = [ "", null, false, "", null, false, "", null, false, "", null, false, "", null, false ]
 allow_reselect = true
 icon_scale = 0.9
 fixed_icon_size = Vector2( 26, 32 )
@@ -185,7 +182,7 @@ margin_bottom = 147.5
 rect_scale = Vector2( 0.3, 0.315504 )
 focus_mode = 0
 custom_colors/font_color = Color( 0.133333, 0.941176, 0.129412, 1 )
-items = [ "0", ExtResource( 19 ), false, "0", ExtResource( 20 ), false, "3", ExtResource( 21 ), false ]
+items = [ "3", ExtResource( 21 ), false, "3", ExtResource( 19 ), false, "3", ExtResource( 11 ), false ]
 allow_reselect = true
 max_columns = 3
 same_column_width = true

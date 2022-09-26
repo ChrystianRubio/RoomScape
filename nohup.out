@@ -20,3 +20,2385 @@ WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
      at: cleanup (core/object.cpp:2070)
 ERROR: Resources still in use at exit (run with --verbose for details).
    at: clear (core/resource.cpp:417)
+Godot Engine v3.5.stable.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: Mesa DRI Intel(R) HD Graphics 2000 (SNB GT1)
+Async. shader compilation: OFF
+ 
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Condition "_first != nullptr" is true.
+   at: ~List (./core/self_list.h:108)
+ERROR: Condition "_first != nullptr" is true.
+   at: ~List (./core/self_list.h:108)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object.cpp:2070)
+ERROR: Resources still in use at exit (run with --verbose for details).
+   at: clear (core/resource.cpp:417)
+Godot Engine v3.5.stable.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: Mesa DRI Intel(R) HD Graphics 2000 (SNB GT1)
+Async. shader compilation: OFF
+ 
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Parent node is busy setting up children, add_node() failed. Consider using call_deferred("add_child", child) instead.
+   at: add_child (scene/main/node.cpp:1286)
+ERROR: Parent node is busy setting up children, add_node() failed. Consider using call_deferred("add_child", child) instead.
+   at: add_child (scene/main/node.cpp:1286)
+ERROR: Parent node is busy setting up children, add_node() failed. Consider using call_deferred("add_child", child) instead.
+   at: add_child (scene/main/node.cpp:1286)
+ERROR: Parent node is busy setting up children, add_node() failed. Consider using call_deferred("add_child", child) instead.
+   at: add_child (scene/main/node.cpp:1286)
+ERROR: Parent node is busy setting up children, add_node() failed. Consider using call_deferred("add_child", child) instead.
+   at: add_child (scene/main/node.cpp:1286)
+ERROR: Condition "_first != nullptr" is true.
+   at: ~List (./core/self_list.h:108)
+ERROR: Condition "_first != nullptr" is true.
+   at: ~List (./core/self_list.h:108)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object.cpp:2070)
+ERROR: Resources still in use at exit (run with --verbose for details).
+   at: clear (core/resource.cpp:417)
+Godot Engine v3.5.stable.official.991bb6ac7 - https://godotengine.org
+OpenGL ES 3.0 Renderer: Mesa DRI Intel(R) HD Graphics 2000 (SNB GT1)
+Async. shader compilation: OFF
+ 
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 1 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Index p_idx = 2 is out of bounds (items.size() = 1).
+   at: is_selected (scene/gui/item_list.cpp:282)
+ERROR: Condition "_first != nullptr" is true.
+   at: ~List (./core/self_list.h:108)
+ERROR: Condition "_first != nullptr" is true.
+   at: ~List (./core/self_list.h:108)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object.cpp:2070)
+ERROR: Resources still in use at exit (run with --verbose for details).
+   at: clear (core/resource.cpp:417)
