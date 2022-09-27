@@ -41,6 +41,10 @@ func _process(delta):
 		add_child(preload("res://SimpleAxe.tscn").instance())
 		$KinematicBody2D/Layout.flag_instance_simple_axe = false
 	
+	if $KinematicBody2D/Layout.flag_instance_wood:
+		add_child(preload("res://Wood.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_wood = false
+	
 	if $KinematicBody2D/Layout.flag_instance_gold:
 		#esse for é para jogar todos as moedas no chao
 		for quantify in range(0, $KinematicBody2D/Layout.quantify_gold):
@@ -95,23 +99,44 @@ func _on_Main_child_exiting_tree(node):
 		mani[2]["main"]["positionY"] = $KinematicBody2D.position.y 
 		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
 	if node.is_in_group("tree"):
+		#quando um algo do tipo tree morrer, wood aparece no mesmo lugar x e y
+		position_node_x = node.position.x
+		position_node_y = node.position.y
+
 		if node.is_in_group("simple_tree"):
 			limit_simple_tree -= 1
 
+		#porcentagem de drop
+		var percentual_simple_tree_drop_wood = rand_range(0, 100)
+		if percentual_simple_tree_drop_wood < 20:
+			add_child(preload("res://Wood.tscn").instance())
 	if node.is_in_group("animals"):
-		if node.is_in_group("Scorpion"):
-			# se for o scorpion que morreu o limit do scorpion recebe -1
-			limit_scorpion -= 1  #toda vez que morrer um nasce outro
-		if node.is_in_group("ant"):
-			#se for o ant que morreu limit do ant recebe -1
-			limit_ant -= 1
-		if node.is_in_group("bug"):
-			limit_bug -= 1
-
 		#quando um algo do tipo animals morrer, meet aparece no mesmo lugar x e y
 		position_node_x = node.position.x
 		position_node_y = node.position.y
-		add_child(preload("res://Meet.tscn").instance())
+		if node.is_in_group("Scorpion"):
+			# se for o scorpion que morreu o limit do scorpion recebe -1
+			limit_scorpion -= 1  #toda vez que morrer um nasce outro
+			#porcentagem de drop
+			var percentual_scorpion_drop_meat = rand_range(0, 100)
+			if percentual_scorpion_drop_meat < 40:
+				add_child(preload("res://Meet.tscn").instance())
+		if node.is_in_group("ant"):
+			#se for o ant que morreu limit do ant recebe -1
+			limit_ant -= 1
+			var percentual_ant_drop_meat = rand_range(0, 100)
+			if percentual_ant_drop_meat < 25:
+				add_child(preload("res://Meet.tscn").instance())
+		if node.is_in_group("bug"):
+			limit_bug -= 1
+			var percentual_bug_drop_meat = rand_range(0, 100)
+			if percentual_bug_drop_meat < 20:
+				add_child(preload("res://Meet.tscn").instance())
+
+		#quando um algo do tipo animals morrer, meet aparece no mesmo lugar x e y
+		#position_node_x = node.position.x
+		#position_node_y = node.position.y
+		#add_child(preload("res://Meet.tscn").instance())
 
 	#parar animacao do personagem algo morrer
 	if $KinematicBody2D/AnimatedSprite.animation == "up_attack":
@@ -141,6 +166,18 @@ func _on_Main_child_entered_tree(node):
 	if node.is_in_group("item"):
 		#necessario mais de um grupo pois as sprites sao de tamanhos diferetentes e precisam
 		# de scale diferentes
+		if node.is_in_group("wood"):
+			node.scale.x = 0.8
+			node.scale.y = 0.8
+			#necessario para posicao correta na hora de jogar fora
+
+			if $KinematicBody2D/Layout.flag_correct_position:
+				node.position.x = $KinematicBody2D.position.x
+				node.position.y = $KinematicBody2D.position.y
+				#$KinematicBody2D/Layout.flag_correct_position = false
+			else:
+				node.position.x = position_node_x
+				node.position.y = position_node_y
 		if node.is_in_group("sword"):
 			node.position.x = $KinematicBody2D.position.x
 			node.position.y = $KinematicBody2D.position.y

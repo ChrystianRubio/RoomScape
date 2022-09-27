@@ -3,11 +3,11 @@ extends Node
 class_name SaveGame
 
 # O caminho dos saves 
-var path_game_events = "user://game_events31.save"
-var path_bag = "user://character_bag90.save"
-var path_skills = "user://character_skills37.save"
-var path_equip = "user://character_equip130.save"
-var path_status_character = "user://character_status50.save"
+var path_game_events = "user://game_events34.save"
+var path_bag = "user://character_bag92.save"
+var path_skills = "user://character_skills38.save"
+var path_equip = "user://character_equip131.save"
+var path_status_character = "user://character_status51.save"
 
 
 
@@ -32,6 +32,13 @@ var default_value_game_events = {
 	"buy_iron_sword": "you bought an iron sword",
 	"buy_reforced_wood_shield": "you bought a reforced wood shield",
 	"buy_simple_axe": "you bought a simple axe",
+	"buy_meat": "you bought a meat",
+	"buy_wood": "you bought a wood",
+	"sell_iron_sword": "you sold an iron sword",
+	"sell_reforced_wood_shield": "you sold a reforced wood shield",
+	"sell_simple_axe": "you sold a simple axe",
+	"sell_meat": "you sold a meat",
+	"sell_wood": "you sold a wood",
 	"level_up_fight": "you advanced your fighting level to ",
 	"level_up_woodcutting": "you advanced your woodcutting level to ",
 	

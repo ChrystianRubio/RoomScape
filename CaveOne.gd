@@ -36,6 +36,10 @@ func _process(delta):
 		add_child(preload("res://SimpleAxe.tscn").instance())
 		$KinematicBody2D/Layout.flag_instance_simple_axe = false
 	
+	if $KinematicBody2D/Layout.flag_instance_wood:
+		add_child(preload("res://Wood.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_wood = false
+	
 	#item agrupavel
 	if $KinematicBody2D/Layout.flag_instance_gold:
 		#esse for é para jogar todos as moedas no chao
@@ -80,6 +84,14 @@ func _on_CaveOne_child_entered_tree(node):
 	if node.is_in_group("item"):
 		#necessario mais de um grupo pois as sprites sao de tamanhos diferetentes e precisam
 		# de scale diferentes
+		if node.is_in_group("wood"):
+			node.scale.x = 0.8
+			node.scale.y = 0.8
+			#necessario para posicao correta na hora de jogar fora
+			if $KinematicBody2D/Layout.flag_correct_position:
+				node.position.x = $KinematicBody2D.position.x
+				node.position.y = $KinematicBody2D.position.y
+				$KinematicBody2D/Layout.flag_correct_position = false
 		if node.is_in_group("sword"):
 			node.position.x = $KinematicBody2D.position.x
 			node.position.y = $KinematicBody2D.position.y
@@ -156,12 +168,15 @@ func _on_CaveOne_child_exiting_tree(node):
 	if node.is_in_group("monster"):
 		if node.is_in_group("devourer"):
 			limit_devourer -= 1
+			var percentual_devourer_drop_gold = rand_range(0, 100)
+			if percentual_devourer_drop_gold < 60:
+				add_child(preload("res://Gold.tscn").instance())
 
 		#quando algo do tipo monster morrer, gold aparece no mesmo lugar x e y
 		position_node_x = node.position.x
 		position_node_y = node.position.y
 		$KinematicBody2D/Layout.flag_correct_position = false #necessario para ir para a posicao correta do bixo
-		add_child(preload("res://Gold.tscn").instance())
+		#add_child(preload("res://Gold.tscn").instance())
 
 
 		#parar animacao do personagem quando algo do tipo monster morrer

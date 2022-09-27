@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/skills.png" type="Texture" id=1]
 [ext_resource path="res://assets/equips.png" type="Texture" id=2]
@@ -11,10 +11,15 @@
 [ext_resource path="res://assets/transparentDark07.png" type="Texture" id=9]
 [ext_resource path="res://assets/214_0.png" type="Texture" id=10]
 [ext_resource path="res://assets/simple_axe.png" type="Texture" id=11]
+[ext_resource path="res://assets/meet.png" type="Texture" id=12]
 [ext_resource path="res://ItemsTexture.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/520_0.png" type="Texture" id=14]
+[ext_resource path="res://assets/1227_0.png" type="Texture" id=15]
+[ext_resource path="res://assets/1226_0.png" type="Texture" id=16]
 [ext_resource path="res://assets/1717_0.png" type="Texture" id=17]
 [ext_resource path="res://assets/1042_1.png" type="Texture" id=18]
 [ext_resource path="res://assets/shield_01a.png" type="Texture" id=19]
+[ext_resource path="res://assets/wood_01a.png" type="Texture" id=20]
 [ext_resource path="res://assets/sword_01c.png" type="Texture" id=21]
 
 [sub_resource type="RectangleShape2D" id=4]
@@ -178,16 +183,69 @@ anchor_bottom = 0.5
 margin_left = -20.0
 margin_top = -27.5
 margin_right = 114.0
+margin_bottom = 146.5
+rect_scale = Vector2( 0.3, 0.315504 )
+focus_mode = 0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+items = [ "Buy: 3 DMG: 3", ExtResource( 21 ), false, "Buy: 3 DEF: 3", ExtResource( 19 ), false, "Buy: 3 DMG: 3", ExtResource( 11 ), false, "Buy: 1 H: 3", ExtResource( 12 ), false, "Buy: 1", ExtResource( 20 ), false ]
+allow_reselect = true
+same_column_width = true
+icon_mode = 0
+fixed_icon_size = Vector2( 26, 30 )
+
+[node name="ItemListStoreSell" type="ItemList" parent="optionsLayout"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -27.5
+margin_right = 114.0
 margin_bottom = 147.5
 rect_scale = Vector2( 0.3, 0.315504 )
 focus_mode = 0
 custom_colors/font_color = Color( 0.133333, 0.941176, 0.129412, 1 )
-items = [ "3", ExtResource( 21 ), false, "3", ExtResource( 19 ), false, "3", ExtResource( 11 ), false ]
+items = [ "Sell: 3", ExtResource( 21 ), false, "Sell: 3", ExtResource( 19 ), false, "Sell: 3", ExtResource( 11 ), false, "Sell: 1", ExtResource( 12 ), false, "Sell: 1", ExtResource( 20 ), false ]
 allow_reselect = true
-max_columns = 3
+max_columns = 2
 same_column_width = true
 icon_mode = 0
 fixed_icon_size = Vector2( 26, 30 )
+
+[node name="ItemOptionsBuy" type="ItemList" parent="optionsLayout"]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -11.7801
+margin_top = -36.9767
+margin_right = 24.2199
+margin_bottom = 40.0233
+rect_scale = Vector2( 0.3, 0.316 )
+focus_mode = 0
+items = [ "", ExtResource( 14 ), false, "", ExtResource( 16 ), false ]
+allow_reselect = true
+max_columns = 2
+same_column_width = true
+fixed_column_width = 21
+fixed_icon_size = Vector2( 30, 30 )
+
+[node name="ItemOptionsSell" type="ItemList" parent="optionsLayout"]
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -11.7801
+margin_top = -36.9767
+margin_right = 24.2199
+margin_bottom = 40.0233
+rect_scale = Vector2( 0.3, 0.316 )
+focus_mode = 0
+items = [ "", ExtResource( 14 ), false, "", ExtResource( 15 ), false ]
+allow_reselect = true
+max_columns = 2
+same_column_width = true
+fixed_column_width = 21
+fixed_icon_size = Vector2( 30, 30 )
 
 [node name="ItemsTexture" parent="." instance=ExtResource( 13 )]
 

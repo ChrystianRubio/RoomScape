@@ -25,11 +25,11 @@ func _ready():
 
 	pass # Replace with function body.
 
-#var velocity = Vector2()
-#func _physics_process(delta):
-#	velocity = Vector2()
-#	velocity = velocity.normalized() * 100
-#	velocity = move_and_slide(velocity)
+var velocity = Vector2()
+func _physics_process(delta):
+	velocity = Vector2()
+	velocity = velocity.normalized() * 100
+	velocity = move_and_slide(velocity)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -87,6 +87,7 @@ func _on_Timer_timeout():
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.name == "KinematicBody2D":
 		flagNear = true
+
 	pass # Replace with function body.
 
 #funcao para parar de atacar quando sair de perto

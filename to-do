@@ -26,10 +26,19 @@ Passo a passo:
 		coloque para aparecer na bag o objeto
 		
 		em Layout.gd coloque no lugar onde é pra jogar fora/chao
+		em Main.gd(e outras cidades) coloque a instancia no process(de cada cidade que tiver ativo o drop de coisas)
 		em Main.gd(e outros cidades) coloque os grupos corretos e onde vao aparecer(pega posica x e y correta)
-		coloque a instancia no process(de cada cidade que tiver ativo o drop de coisas)
 		
-		nas cidades onde as criaturas morrem, colocar o objeto que vao dropar
+		
+		nas cidades onde as criaturas/arvore morrem, colocar o objeto que vao dropar
+		coloque nas cidades quando algo do tipo morrer ira instancia esse novo objeto no msmo x e y do 
+		objeto que morreu
+		
+		se for algum objeto de colocar nas lojas:
+			coloque no item la no 2d
+		
+		
+		
 		
 		###### parte do agrupavel começa aqui
 		item neutro agrupavel:
@@ -65,9 +74,10 @@ Passo a passo:
 		nas cidades onde as criaturas morrem, colocar o objeto que vao dropar
 		
 		se for da loja coloque na loja no itens
-		vai em layout.gd e coloque a opcao valendo la
 		troque o limite da loja pq voce aumentou mais um item la
-		apos isso coloque o log tbm
+		coloque no vetor o valor "value_items"
+		vai em layout.gd e coloque a opcao valendo la
+		apos isso coloque o log(compra e venda)
 
 
 

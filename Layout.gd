@@ -8,7 +8,7 @@ extends Control
 #obtendo um objeto do tipo savegame para acessar o banco de dados
 var manipulation_acess_dd = SaveGame.new()
 var mani
-var quantify_gold = 0 
+var quantify_gold = 0
 
 
 var flag_instance_sword = false
@@ -17,7 +17,9 @@ var flag_instance_meet = false
 var flag_instance_gold = false
 var flag_instance_iron_sword = false
 var flag_instance_reforced_wood_shield = false
-var flag_instance_simple_axe  = false
+var flag_instance_simple_axe = false
+var flag_instance_wood = false
+
 var flag_correct_position = false
 
 
@@ -67,59 +69,157 @@ func _process(delta):
 	set_level(1, "woodcutting", "level_up_woodcutting")
 	$optionsLayout/ItemListSkills.set_item_text(0, "Fight: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[0]['fight']["level_current"]))
 	$optionsLayout/ItemListSkills.set_item_text(1, "woodcutting: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[1]['woodcutting']["level_current"]))
-	
-	#comprando na loja
-	for slot_store in range(0, 3):
+
+	#comprando na loja buy
+	for slot_store in range(0, 5):
 		if $optionsLayout/ItemListStore.is_selected(slot_store):
-			#vou deseleciona logo em seguida pra nao permanecer comprando
-			$optionsLayout/ItemListStore.unselect(slot_store)
-			mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
+			
+			if $optionsLayout/ItemListStore.visible:
+				$optionsLayout/ItemOptionsBuy.visible = true
+			else:
+				$optionsLayout/ItemOptionsBuy.visible = false
+			#se selecionar o equipar
+			if $optionsLayout/ItemOptionsBuy.is_selected(1):
 
-			var flag_buy = false
-			var flag_slot = false
-			#a loja é de forma statica
-			for slot_bag in range(0, 7):
-				if str(mani[slot_bag]) != str(manipulation_acess_dd.default_value_bag[slot_bag]):
-					if mani[slot_bag]["name"] == "gold": # se tiver gold
-							for x in range(0, 7): 
-								if str(mani[x]) == str(manipulation_acess_dd.default_value_bag[x]): # se tiver slot vazio na bag
-									flag_buy = true
-									break
-								if x >= 6:
-									$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["no_empty_slots"] + "\n"
-							if flag_buy: # cobrando
-								if mani[slot_bag]["gold"] >= int($optionsLayout/ItemListStore.get_item_text(slot_store)):
-									mani[slot_bag]["gold"] -= int($optionsLayout/ItemListStore.get_item_text(slot_store))
-									flag_slot = true
-								else:
-									$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["no_money"] + "\n"
+				#agora eu vou deselecionar pq ele nao sai sozinho, podendo dar problema futuramente
+				$optionsLayout/ItemOptionsBuy.unselect(1)
 
-							break
-
-			if flag_buy and flag_slot:
+				mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
+				var flag_buy = false
+				var flag_slot = false
+				var value_items = [3, 3, 3, 1, 1] #todos os valores do itens terao que ficar aqui em ordem
+				#a loja é de forma statica
 				for slot_bag in range(0, 7):
-						if str(mani[slot_bag]) == str(manipulation_acess_dd.default_value_bag[slot_bag]):
+					if str(mani[slot_bag]) != str(manipulation_acess_dd.default_value_bag[slot_bag]):
+						if mani[slot_bag]["name"] == "gold": # se tiver gold
+								for x in range(0, 7): 
+									if str(mani[x]) == str(manipulation_acess_dd.default_value_bag[x]): # se tiver slot vazio na bag
+										flag_buy = true
+										break
+									if x >= 6:
+										$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["no_empty_slots"] + "\n"
+								if flag_buy: # cobrando
+									if mani[slot_bag]["gold"] >= value_items[slot_store]:
+										mani[slot_bag]["gold"] -= value_items[slot_store]
+										flag_slot = true
+									else:
+										$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["no_money"] + "\n"
 
-							if slot_store == 0:
-								mani[slot_bag] = {"name" : "iron_sword", "damage": 3, "defense": 0, "health": 0, "gold": 0,"wood": false , "weapon": true, "shield": false, "food": false}
-								$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_iron_sword"] + "\n"
+								break
 
-							elif slot_store == 1:
-								mani[slot_bag] = {"name" : "reforced_wood_shield", "damage": 0, "defense": 3, "health": 0, "gold": 0,"wood": false , "weapon": false, "shield": true, "food": false}
-								$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_reforced_wood_shield"] + "\n"
+				if flag_buy and flag_slot:
+					for slot_bag in range(0, 7):
+							if str(mani[slot_bag]) == str(manipulation_acess_dd.default_value_bag[slot_bag]):
 
-							elif slot_store == 2:
-								mani[slot_bag] =  {"name" : "simple_axe", "damage": 1, "defense": 0, "health": 0, "gold": 0,"wood": true , "weapon": true, "shield": false, "food": false}
-								$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_reforced_wood_shield"] + "\n"
-							flag_buy = false
+								if slot_store == 0:
+									mani[slot_bag] = {"name" : "iron_sword", "damage": 3, "defense": 0, "health": 0, "gold": 0,"wood": false , "weapon": true, "shield": false, "food": false}
+									#mani[slot_bag]["gold"] -= 3
+									$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_iron_sword"] + "\n"
+
+								elif slot_store == 1:
+									mani[slot_bag] = {"name" : "reforced_wood_shield", "damage": 0, "defense": 3, "health": 0, "gold": 0,"wood": false , "weapon": false, "shield": true, "food": false}
+									#mani[slot_bag]["gold"] -= 3
+									$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_reforced_wood_shield"] + "\n"
+
+								elif slot_store == 2:
+									mani[slot_bag] =  {"name" : "simple_axe", "damage": 1, "defense": 0, "health": 0, "gold": 0,"wood": true , "weapon": true, "shield": false, "food": false}
+									#mani[slot_bag]["gold"] -= 3
+									$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_simple_axe"] + "\n"
+		
+								elif slot_store == 3:
+									mani[slot_bag] =  {"name" : "meet", "damage": 0, "defense": 0, "health": 3,"gold": 0,"wood": false, "weapon": false, "shield": false, "food": true}
+									#mani[slot_bag]["gold"] -= 3
+									$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_meat"] + "\n"
+								
+								elif slot_store == 4:
+									mani[slot_bag] = {"name" : "wood", "damage": 0, "defense": 0, "health": 0, "gold": 0,"wood": false, "weapon": false, "shield": false, "food": false}
+									#mani[slot_bag]["gold"] -= 3
+									$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["buy_wood"] + "\n"
+								flag_buy = false
+								break
+				
+				$optionsLayout/ItemOptionsBuy.unselect_all()
+				$optionsLayout/ItemOptionsBuy.visible = false
+				$optionsLayout/ItemListStore.unselect_all()
+				manipulation_acess_dd.set_save(manipulation_acess_dd.path_bag, mani)
+
+			elif $optionsLayout/ItemOptionsBuy.is_selected(0):
+				$optionsLayout/ItemOptionsBuy.unselect_all()
+				$optionsLayout/ItemOptionsBuy.visible = false
+				$optionsLayout/ItemListStore.unselect_all()
+
+	#vendendo na loja sell
+	for slot_store in range(0, 5):
+		if $optionsLayout/ItemListStoreSell.is_selected(slot_store):
+			#colocando visivel
+			if $optionsLayout/ItemListStoreSell.visible:
+				$optionsLayout/ItemOptionsSell.visible = true
+			else:
+				$optionsLayout/ItemOptionsSell.visible = false
+			#se selecionar o equipar
+			if $optionsLayout/ItemOptionsSell.is_selected(1):
+				#agora eu vou deselecionar pq ele nao sai sozinho, podendo dar problema futuramente
+				$optionsLayout/ItemOptionsSell.unselect(1)
+				mani = manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")
+				var flag_have_item = false
+				var value_items = [3, 3, 3, 1, 1] #todos os valores do itens terao que ficar aqui em ordem
+
+				#procurando na bag se eu tenho o objeto selecionado
+				for slot_bag in range(0, 7):
+					if slot_store == 0 and mani[slot_bag]["name"] == "iron_sword":
+							flag_have_item = true
+							mani[slot_bag] = manipulation_acess_dd.default_value_bag[slot_bag]
+							$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["sell_iron_sword"] + "\n"
+							break # necessario para pegar somente uma no caso de o persogem ter mais na bag
+					elif slot_store == 1 and mani[slot_bag]["name"] == "reforced_wood_shield":
+							flag_have_item = true
+							mani[slot_bag] = manipulation_acess_dd.default_value_bag[slot_bag]
+							$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["sell_reforced_wood_shield"] + "\n"
+							break
+					elif slot_store == 2 and mani[slot_bag]["name"] == "simple_axe":
+							flag_have_item = true
+							mani[slot_bag] = manipulation_acess_dd.default_value_bag[slot_bag]
+							$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["sell_simple_axe"] + "\n"
+							break
+					elif slot_store == 3 and mani[slot_bag]["name"] == "meet":
+							flag_have_item = true
+							mani[slot_bag] = manipulation_acess_dd.default_value_bag[slot_bag]
+							$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["sell_meat"] + "\n"
+							break
+					elif slot_store == 4 and mani[slot_bag]["name"] == "wood":
+							flag_have_item = true
+							mani[slot_bag] = manipulation_acess_dd.default_value_bag[slot_bag]
+							$gameEventsLayout/EventsLog.text += manipulation_acess_dd.default_value_game_events["sell_wood"] + "\n"
 							break
 
-			manipulation_acess_dd.set_save(manipulation_acess_dd.path_bag, mani)
 
+				for slot_bag in range(0, 7):
+						#se eu tiver eu preciso verificar se tenho gold ou nao
+						if flag_have_item:
+							if mani[slot_bag]["name"] == "gold": # se eu ja tiver gold, faz a soma e break
+								mani[slot_bag]["gold"] += value_items[slot_store]
+								break
+							if slot_bag == 6: # se chegou ate aqui significa que nao achou gold em nenhum dos slots
+								for slot in range(0, 7): # entao verifica se tem lugar e se tiver lugar na bag coloque o gold ja com o valor do objeto clicado e break
+									if mani[slot]["name"] == null:
+										mani[slot] = {"name" : "gold", "damage": 0, "defense": 0, "health": 0, "gold": value_items[slot_store] ,"wood": false, "weapon": false, "shield": false, "food": false}
+										break
 
+				$optionsLayout/ItemOptionsSell.unselect_all()
+				$optionsLayout/ItemOptionsSell.visible = false
+				$optionsLayout/ItemListStoreSell.unselect_all()
+				manipulation_acess_dd.set_save(manipulation_acess_dd.path_bag, mani)
+			elif $optionsLayout/ItemOptionsSell.is_selected(0):
+				$optionsLayout/ItemOptionsSell.unselect_all()
+				$optionsLayout/ItemOptionsSell.visible = false
+				$optionsLayout/ItemListStoreSell.unselect_all()
+
+	#bag
 	for slot_bag in range(0, 7):
 
 		#condicao para aparecer na layout da bag, se caso existir na bag bd
+		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "wood":
+			$optionsLayout/ItemListBag.set_item_icon(slot_bag, $ItemsTexture/wood.texture )
 		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "simple_axe":
 			$optionsLayout/ItemListBag.set_item_icon(slot_bag, $ItemsTexture/simple_axe.texture ) 
 		if str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"]) == "reforced_wood_shield":
@@ -240,6 +340,9 @@ func _process(delta):
 						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
 					elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"] == "simple_axe":
 						flag_instance_simple_axe = true
+						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
+					elif manipulation_acess_dd.acess_save(manipulation_acess_dd.path_bag, "")[slot_bag]["name"] == "wood":
+						flag_instance_wood = true
 						flag_correct_position = true #necessario para posicao correta na hora de jogar fora
 			
 					# apos jogar no chao, deletar da bag

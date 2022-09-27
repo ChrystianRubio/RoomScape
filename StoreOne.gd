@@ -45,7 +45,10 @@ func _process(delta):
 	if $KinematicBody2D/Layout.flag_instance_iron_sword:
 		add_child(preload("res://IronSword.tscn").instance())
 		$KinematicBody2D/Layout.flag_instance_iron_sword = false
-#	pass
+#	
+	if $KinematicBody2D/Layout.flag_instance_wood:
+		add_child(preload("res://Wood.tscn").instance())
+		$KinematicBody2D/Layout.flag_instance_wood = false
 
 
 # ir embora
@@ -68,7 +71,25 @@ func _on_Estavan_body_shape_exited(body_rid, body, body_shape_index, local_shape
 	if body:
 		if body.name == "KinematicBody2D":
 			$KinematicBody2D/Layout/optionsLayout/ItemListStore.visible = false
+			#$KinematicBody2D/Layout/optionsLayout/ItemOptionsBuySell.unselect_all()
 	pass # Replace with function body.
+
+
+func _on_Jacob_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	if body:
+		if body.name == "KinematicBody2D":
+			$KinematicBody2D/Layout/optionsLayout/ItemListStoreSell.visible = true
+	pass # Replace with function body.
+
+
+func _on_Jacob_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	if body:
+		if body.name == "KinematicBody2D":
+			$KinematicBody2D/Layout/optionsLayout/ItemListStoreSell.visible = false
+			#$KinematicBody2D/Layout/optionsLayout/ItemOptionsBuySell.unselect_all()
+	pass # Replace with function body.
+
+
 
 #quando algo morrer ele nos entrga seu x e y para o meet e outros objetos
 var position_node_x = 0
@@ -87,6 +108,14 @@ func _on_StoreOne_child_entered_tree(node):
 	if node.is_in_group("item"):
 		#necessario mais de um grupo pois as sprites sao de tamanhos diferetentes e precisam
 		# de scale diferentes
+		if node.is_in_group("wood"):
+			node.scale.x = 0.8
+			node.scale.y = 0.8
+			#necessario para posicao correta na hora de jogar fora
+			if $KinematicBody2D/Layout.flag_correct_position:
+				node.position.x = $KinematicBody2D.position.x
+				node.position.y = $KinematicBody2D.position.y
+				$KinematicBody2D/Layout.flag_correct_position = false
 		if node.is_in_group("sword"):
 			node.position.x = 518
 			node.position.y = 184
@@ -156,3 +185,4 @@ func _on_StoreOne_child_exiting_tree(node):
 		mani[2]["main"]["positionY"] = -334
 		manipulation_acess_dd.set_save(manipulation_acess_dd.path_status_character, mani)
 	pass # Replace with function body.
+

@@ -24,6 +24,11 @@ func _ready():
 
 	pass # Replace with function body.
 
+var velocity = Vector2()
+func _physics_process(delta):
+	velocity = Vector2()
+	velocity = velocity.normalized() * 100
+	velocity = move_and_slide(velocity)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
