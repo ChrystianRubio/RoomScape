@@ -174,7 +174,7 @@ func _on_Main_child_entered_tree(node):
 			if $KinematicBody2D/Layout.flag_correct_position:
 				node.position.x = $KinematicBody2D.position.x
 				node.position.y = $KinematicBody2D.position.y
-				#$KinematicBody2D/Layout.flag_correct_position = false
+				$KinematicBody2D/Layout.flag_correct_position = false
 			else:
 				node.position.x = position_node_x
 				node.position.y = position_node_y

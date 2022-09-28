@@ -167,14 +167,17 @@ func _on_CaveOne_child_exiting_tree(node):
 
 	if node.is_in_group("monster"):
 		if node.is_in_group("devourer"):
+			#quando algo do tipo monster morrer, gold aparece no mesmo lugar x e y
+			position_node_x = node.position.x
+			position_node_y = node.position.y
 			limit_devourer -= 1
 			var percentual_devourer_drop_gold = rand_range(0, 100)
 			if percentual_devourer_drop_gold < 60:
 				add_child(preload("res://Gold.tscn").instance())
 
-		#quando algo do tipo monster morrer, gold aparece no mesmo lugar x e y
-		position_node_x = node.position.x
-		position_node_y = node.position.y
+#		#quando algo do tipo monster morrer, gold aparece no mesmo lugar x e y
+#		position_node_x = node.position.x
+#		position_node_y = node.position.y
 		$KinematicBody2D/Layout.flag_correct_position = false #necessario para ir para a posicao correta do bixo
 		#add_child(preload("res://Gold.tscn").instance())
 

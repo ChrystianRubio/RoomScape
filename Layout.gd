@@ -482,6 +482,7 @@ func _on_ButtonSkills_pressed():
 
 	if $optionsLayout/ItemListSkills.visible:
 		$optionsLayout/ItemListSkills.visible = false
+		$optionsLayout/ItemListSkills.unselect_all()
 	else:
 		$optionsLayout/ItemListSkills.visible = true
 	pass # Replace with function body.
