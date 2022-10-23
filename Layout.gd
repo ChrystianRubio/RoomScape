@@ -70,6 +70,34 @@ func _process(delta):
 	$optionsLayout/ItemListSkills.set_item_text(0, "Fight: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[0]['fight']["level_current"]))
 	$optionsLayout/ItemListSkills.set_item_text(1, "woodcutting: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[1]['woodcutting']["level_current"]))
 
+	#mostrando next xp e level no log apos apetar nas skilss
+	for slot_skill in range(0, 2):
+		if $optionsLayout/ItemListSkills.is_selected(slot_skill):
+			$optionsLayout/ItemListSkills.unselect_all()
+
+			if slot_skill == 0:
+				var percent = int((manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[slot_skill]["fight"]["xp_current"] /\
+			  	manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[slot_skill]["fight"]["xp_next"]) * 100.0)
+
+				$gameEventsLayout/EventsLog.text += "\t\t\t\t\t\t\tFight: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[slot_skill]["fight"]["level_current"]) + "\n"
+				$gameEventsLayout/EventsLog.text += "xp: " + \
+				str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[slot_skill]["fight"]["xp_current"]) + "\n" + \
+				"next_xp_level: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[slot_skill]["fight"]["xp_next"]) + "\n" + \
+				"percentage: " + str(percent) + "%" + "\n" + "################################" + "\n" 
+
+			elif slot_skill == 1:
+				var percent = int((manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[slot_skill]["woodcutting"]["xp_current"] /\
+			  	manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[slot_skill]["woodcutting"]["xp_next"]) * 100.0)
+
+				$gameEventsLayout/EventsLog.text += "\t\t\t\t\t\tWoodcutting: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[slot_skill]["woodcutting"]["level_current"]) + "\n"
+				$gameEventsLayout/EventsLog.text += "xp: " + \
+				str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[slot_skill]["woodcutting"]["xp_current"]) + "\n" + \
+				"next_xp_level: " + str(manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[slot_skill]["woodcutting"]["xp_next"]) + "\n" + \
+				"percentage: " + str(percent) + "%" + "\n" + "################################" + "\n" 
+
+		#$optionsLayout/ItemListEquip.unselect_all()
+			#break
+
 	#comprando na loja buy
 	for slot_store in range(0, 5):
 		if $optionsLayout/ItemListStore.is_selected(slot_store):
@@ -425,24 +453,49 @@ func set_level(var location, var skill, var level_up_msg):
 	#var flag_level_up = false
 	if mani[location][skill]["xp_current"] < 100:
 		mani[location][skill]["level_current"] = 1
+		mani[location][skill]["xp_next"] = 200
 	elif mani[location][skill]["xp_current"] >= 100 and mani[location][skill]["xp_current"] < 200 :
 		mani[location][skill]["level_current"] = 2
+		mani[location][skill]["xp_next"] = 400
 	elif mani[location][skill]["xp_current"] >= 200 and mani[location][skill]["xp_current"] < 400 :
 		mani[location][skill]["level_current"] = 3
+		mani[location][skill]["xp_next"] = 800
 	elif mani[location][skill]["xp_current"] >= 400 and mani[location][skill]["xp_current"] < 800 :
 		mani[location][skill]["level_current"] = 4
+		mani[location][skill]["xp_next"] = 1500
 	elif mani[location][skill]["xp_current"] >= 800 and mani[location][skill]["xp_current"] < 1500 :
 		mani[location][skill]["level_current"] = 5
+		mani[location][skill]["xp_next"] = 2600
 	elif mani[location][skill]["xp_current"] >= 1500 and mani[location][skill]["xp_current"] < 2600 :
 		mani[location][skill]["level_current"] = 6
+		mani[location][skill]["xp_next"] = 4200
 	elif mani[location][skill]["xp_current"] >= 2600 and mani[location][skill]["xp_current"] < 4200 :
 		mani[location][skill]["level_current"] = 7
+		mani[location][skill]["xp_next"] = 6400
 	elif mani[location][skill]["xp_current"] >= 4200 and mani[location][skill]["xp_current"] < 6400 :
 		mani[location][skill]["level_current"] = 8
+		mani[location][skill]["xp_next"] = 9300
 	elif mani[location][skill]["xp_current"] >= 6400 and mani[location][skill]["xp_current"] < 9300 :
 		mani[location][skill]["level_current"] = 9
-	elif mani[location][skill]["xp_current"] >= 9300: #and mani[location][skill]["xp_current"] < 6400 :
+		mani[location][skill]["xp_next"] = 9300
+	elif mani[location][skill]["xp_current"] >= 9300 and mani[location][skill]["xp_current"] < 13000 :
 		mani[location][skill]["level_current"] = 10
+		mani[location][skill]["xp_next"] = 13000
+	elif mani[location][skill]["xp_current"] >= 13000 and mani[location][skill]["xp_current"] < 17600 :
+		mani[location][skill]["level_current"] = 11
+		mani[location][skill]["xp_next"] = 17600
+	elif mani[location][skill]["xp_current"] >= 17600 and mani[location][skill]["xp_current"] < 23200 :
+		mani[location][skill]["level_current"] = 12
+		mani[location][skill]["xp_next"] = 23200
+	elif mani[location][skill]["xp_current"] >= 23200 and mani[location][skill]["xp_current"] < 29900 :
+		mani[location][skill]["level_current"] = 13
+		mani[location][skill]["xp_next"] = 29900
+	elif mani[location][skill]["xp_current"] >= 29900 and mani[location][skill]["xp_current"] < 37800 :
+		mani[location][skill]["level_current"] = 14
+		mani[location][skill]["xp_next"] = 37800
+	elif mani[location][skill]["xp_current"] >= 37800: #and mani[location][skill]["xp_current"] < 17600 :
+		mani[location][skill]["level_current"] = 15
+		#mani[location][skill]["xp_next"] = 37800
 
 	#aparecendo uma mensagem de level up no log
 	if mani[location][skill]["level_current"] > manipulation_acess_dd.acess_save(manipulation_acess_dd.path_skills, "")[location][skill]["level_current"]:

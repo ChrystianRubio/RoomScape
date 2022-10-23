@@ -5,7 +5,7 @@ class_name SaveGame
 # O caminho dos saves 
 var path_game_events = "user://game_events34.save"
 var path_bag = "user://character_bag92.save"
-var path_skills = "user://character_skills38.save"
+var path_skills = "user://character_skills51.save"
 var path_equip = "user://character_equip131.save"
 var path_status_character = "user://character_status51.save"
 
@@ -59,9 +59,9 @@ func setValue_game_events_manipulation(var value_game_events_manipulation):
 # skills
 
 var default_value_skills = {
-	0: {"fight": {"xp_current": 0, "level_current": 1},
+	0: {"fight": {"xp_current":  0.0, "level_current": 1.0, "xp_next": 0.0},
 	   },
-	1: {"woodcutting": {"xp_current": 0, "level_current": 1},
+	1: {"woodcutting": {"xp_current": 0.0, "level_current": 1.0, "xp_next": 0.0},
 	   },
 }
 
