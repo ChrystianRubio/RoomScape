@@ -127,3 +127,10 @@ Passo a passo:
 		colocar o limit do bixo recebendo -1 toda vez que um deles morre
 		
 		
+bugs: 
+	
+	colocar icon no app
+	quando vc sai do jogo na cena de morte, o jogo buga, o personagem vai pra um outro lugar escuro
+	nao da pra saber ainda onde(testei somente no mobile)
+	
+	quando baixa o app pelo github , o app nao instala.(testei somente no mobile)
